@@ -22,7 +22,7 @@ const HeroSection = ({ data }) => {
         <h1 className="hero-section__title">{title}</h1>
         <p className="hero-section__description">{description}</p>
       </div>
-      <Button variant="secondary">text</Button>
+      <Button className="bg-emerald-900">Hello</Button>
     </section>
   );
 };

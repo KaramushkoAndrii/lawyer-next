@@ -1,4 +1,11 @@
 {
+  "Navigation": {
+    "main": "Головна",
+    "about": "Про мене",
+    "services": "Послуги",
+    "cases": "Кейси",
+    "connect": "Зв'язатись"
+  },
   "HomePage": {
     "title": "Привіт"
   }
