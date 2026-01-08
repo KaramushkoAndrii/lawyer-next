@@ -2,6 +2,7 @@ import { getData } from "@/lib/getData";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import HeroSection from "@/components/page-home/hero-section/HeroSection";
+import Header from "@/components/base/header/Header";
 
 export default async function Home({ params }) {
   const { locale } = await params;
@@ -11,8 +12,11 @@ export default async function Home({ params }) {
 
   const t = await getTranslations("HomePage");
   return (
-    <main className="">
-      <HeroSection data={first.data} />
-    </main>
+    <>
+      <Header />
+      <main className="">
+        <HeroSection data={first.data} />
+      </main>
+    </>
   );
 }
