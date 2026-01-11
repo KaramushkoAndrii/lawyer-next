@@ -9,13 +9,16 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@heroui/react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@heroui/react";
 import NavigationList from "@/data/navigationList";
+import LangSwitcher from "@/components/base/langSwitcher/LangSwitcher";
 
 const Header = () => {
+  const t = useTranslations("Navigation");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header>
+    <header className="w-full">
       <Navbar
         shouldHideOnScroll
         isBordered
@@ -30,18 +33,26 @@ const Header = () => {
         <NavbarContent className="hidden sm:flex">
           {NavigationList.map((item, index) => (
             <NavbarItem key={index}>
-              <Link href={item.url}>{item.name}</Link>
+              <Link href={item.url}>{t(item.name)}</Link>
             </NavbarItem>
           ))}
+        </NavbarContent>
+        <NavbarContent justify="end" className="hidden sm:flex">
+          <NavbarItem>
+            <LangSwitcher />
+          </NavbarItem>
         </NavbarContent>
         <NavbarMenu>
           {NavigationList.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link className="w-full" href={item.url} size="lg">
-                {item.name}
+                {t(item.name)}
               </Link>
             </NavbarMenuItem>
           ))}
+          <NavbarMenuItem className="sm:hidden">
+            <LangSwitcher />
+          </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
     </header>
