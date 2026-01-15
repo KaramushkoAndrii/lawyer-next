@@ -43,7 +43,7 @@ const Header = () => {
             <Contacts />
           </NavbarItem>
         </NavbarContent>
-        <NavbarContent className="!grow-0 hidden sm:flex ">
+        <NavbarContent className="grow-0! hidden sm:flex ">
           <NavbarItem>
             <LangSwitcher />
           </NavbarItem>

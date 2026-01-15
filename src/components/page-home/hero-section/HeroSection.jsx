@@ -17,12 +17,17 @@ const HeroSection = ({ data }) => {
         />
       )}
 
-      <div className="absolute inset-0 bg-black/50 -z-10" />
-      <div className="hero-section__content">
-        <h1 className="hero-section__title">{title}</h1>
-        <p className="hero-section__description">{description}</p>
+      <div className="absolute inset-0 bg-black/70 -z-10" />
+      <div className="hero-section__content flex flex-col justify-center items-center h-dvh text-center text-white">
+        <div className="hero-section__content--content mb-10">
+          <h1 className="hero-section__title">{title}</h1>
+          <p className="hero-section__description">{description}</p>
+        </div>
+        <div className="hero-section__button-group flex gap-4">
+          <Button className="bg-emerald-900 w-40 ">Обговорити завдання</Button>
+          <Button className="bg-primary w-40">Дізнатися більше</Button>
+        </div>
       </div>
-      <Button className="bg-emerald-900">Hello</Button>
     </section>
   );
 };
