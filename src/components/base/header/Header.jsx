@@ -26,24 +26,24 @@ const Header = () => {
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
       >
-        <NavbarContent className="sm:hidden" justify="start">
+        <NavbarContent className="lg:hidden" justify="start">
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           />
         </NavbarContent>
-        <NavbarContent className="hidden sm:flex">
+        <NavbarContent className="hidden lg:flex">
           {NavigationList.map((item, index) => (
             <NavbarItem key={index}>
               <Link href={item.url}>{t(item.name)}</Link>
             </NavbarItem>
           ))}
         </NavbarContent>
-        <NavbarContent justify="end">
+        <NavbarContent justify="end" className="hidden lg:flex">
           <NavbarItem>
             <Contacts />
           </NavbarItem>
         </NavbarContent>
-        <NavbarContent className="grow-0! hidden sm:flex ">
+        <NavbarContent className="grow-0! hidden lg:flex ">
           <NavbarItem>
             <LangSwitcher />
           </NavbarItem>
@@ -56,7 +56,7 @@ const Header = () => {
               </Link>
             </NavbarMenuItem>
           ))}
-          <NavbarMenuItem className="sm:hidden">
+          <NavbarMenuItem className="lg:hidden">
             <LangSwitcher />
           </NavbarMenuItem>
           <NavbarMenuItem>

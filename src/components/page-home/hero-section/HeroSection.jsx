@@ -23,9 +23,11 @@ const HeroSection = ({ data }) => {
           <h1 className="hero-section__title">{title}</h1>
           <p className="hero-section__description">{description}</p>
         </div>
-        <div className="hero-section__button-group flex gap-4">
-          <Button className="bg-emerald-900 w-40 ">Обговорити завдання</Button>
-          <Button className="bg-primary w-40">Дізнатися більше</Button>
+        <div className="hero-section__button-group flex flex-col gap-4 w-full items-center">
+          <Button className="bg-emerald-900 w-[75%] ">
+            Обговорити завдання
+          </Button>
+          <Button className="bg-primary w-[75%]">Дізнатися більше</Button>
         </div>
       </div>
     </section>
