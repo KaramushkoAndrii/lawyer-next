@@ -1,6 +1,7 @@
 "use client";
 
 import { Form, Input, Button } from "@heroui/react";
+import advatageList from "@/data/advantageList";
 
 const FormSection = () => {
   return (
@@ -19,6 +20,11 @@ const FormSection = () => {
         />
         <Button type="submit">Submit</Button>
       </Form>
+      <ul className="advantage-list flex flex-col gap-4">
+        {advatageList.map((item, index) => (
+          <li key={index}>{item.text}</li>
+        ))}
+      </ul>
     </section>
   );
 };

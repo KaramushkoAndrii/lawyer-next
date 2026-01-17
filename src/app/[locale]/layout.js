@@ -6,6 +6,7 @@ import { getMessages } from "next-intl/server";
 import { Providers } from "../providers";
 import Header from "@/components/base/header/Header";
 import FormSection from "@/components/base/formSection/FormSection";
+import Footer from "@/components/base/footer/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default async function RootLayout({ children, params }) {
             <Header />
             {children}
             <FormSection />
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>
