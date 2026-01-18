@@ -10,7 +10,7 @@ const ServicesSection = () => {
   ];
   return (
     <section className="services container m-auto">
-      <h2> Основні сервіси</h2>
+      <h2 className="text-2xl"> Основні сервіси</h2>
       <ServicesList data={d} />
       <div className="services__request flex flex-col text-center gap-4">
         <p className="services__text">

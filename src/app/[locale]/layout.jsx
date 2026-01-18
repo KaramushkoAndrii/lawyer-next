@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Play, Roboto } from "next/font/google";
 import "../globals.css";
 
 import { NextIntlClientProvider } from "next-intl";
@@ -8,15 +9,29 @@ import Header from "@/components/base/header/Header";
 import FormSection from "@/components/base/formSection/FormSection";
 import Footer from "@/components/base/footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const play = Play({
+  variable: "--font-play",
+  subsets: ["cyrillic"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["cirillic"],
+  weight: ["300", "400", "500", "700"],
+  display: "swap",
 });
+
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata = {
   title: "Мой сайт",
@@ -28,10 +43,8 @@ export default async function RootLayout({ children, params }) {
 
   const messages = await getMessages();
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang={locale} className={`${play.variable} ${roboto.variable}`}>
+      <body className={` antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <Header />
