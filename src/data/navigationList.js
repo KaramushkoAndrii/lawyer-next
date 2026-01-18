@@ -1,5 +1,5 @@
 const NavigationList = [
-  { name: "main", url: "/main" },
+  { name: "main", url: "/" },
   { name: "about", url: "/about" },
   { name: "services", url: "/services" },
   { name: "cases", url: "/build" },
