@@ -3,3 +3,19 @@
 
 @source "../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
 @custom-variant dark (&:is(.dark *));
+
+:root {
+  --heroui-background: 0% 0% 0% / 0%;
+}
+
+@theme {
+  --color-primary: #0043ea;
+  --color-secondary: #1a1313;
+  --color-primary-green: #39db34;
+}
+
+html,
+body {
+  max-width: 100dvw;
+  overflow-x: hidden;
+}
