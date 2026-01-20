@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 import HeroSection from "@/components/page-home/hero-section/HeroSection";
 import WelcomeSection from "@/components/page-home/welcome-section/WelcomeSection";
 import ServicesSection from "@/components/page-home/services-section/ServicesSection";
+import Container from "@/components/base/container/Container";
 
 export default async function Home({ params }) {
   const { locale } = await params;
@@ -14,9 +15,12 @@ export default async function Home({ params }) {
   return (
     <>
       <main className="">
-        <HeroSection data={first.data} />
-        <WelcomeSection />
-        <ServicesSection />
+        {/* <HeroSection data={first.data} /> */}
+        <HeroSection />
+        <Container>
+          <WelcomeSection />
+          <ServicesSection />
+        </Container>
       </main>
     </>
   );

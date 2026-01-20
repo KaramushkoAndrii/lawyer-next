@@ -9,13 +9,35 @@
 }
 
 @theme {
+  --font-sans: var(--font-roboto);
+  --font-heding: var(--font-play);
   --color-primary: #0043ea;
   --color-secondary: #1a1313;
   --color-primary-green: #39db34;
+  --color-main-white: #ffffff;
+  --color-transparent: transparent;
+  --radius-main: 5px;
+  --shadow-main: 0 6px 13px -5px var(--tw-shadow-color, var(--color-primary));
 }
 
 html,
 body {
   max-width: 100dvw;
   overflow-x: hidden;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heding);
+    font-weight: 700;
+  }
+}
+
+.hero-section__title {
+  line-height: 52px;
 }
