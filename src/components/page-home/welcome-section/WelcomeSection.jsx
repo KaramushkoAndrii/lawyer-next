@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@heroui/react";
+import Button from "@/components/UI/button/Button";
 const WelcomeSection = ({ data }) => {
   return (
     <section className="welcome grid mr-auto ml-auto pt-16 pb-16 gap-2 justify-center items-center lg:grid-cols-2">
@@ -22,19 +22,15 @@ const WelcomeSection = ({ data }) => {
           правопорушень, та кримінальних справах.
         </p>
         <div className="welcome__button-group w-full flex flex-col gap-4 items-center">
-          <Button className="bg-primary w-[75%]" radius="sm">
-            отримати консультацію
-          </Button>
-          <Button className="bg-primary w-[75%]" radius="sm">
-            Дивитися відео
-          </Button>
+          <Button className={`lg:max-w-full`}>отримати консультацію</Button>
+          <Button className={`lg:max-w-full`}>Дивитися відео</Button>
         </div>
       </div>
       <div className="welcome__img relative w-full aspect-video rounded-main lg:h-full">
         <Image
           alt="description"
           fill
-          src={"/MainFoto.webp"}
+          src={"/images/MainFoto.webp"}
           className="object-cover rounded-main"
         />
       </div>

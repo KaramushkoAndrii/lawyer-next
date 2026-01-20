@@ -47,7 +47,7 @@ const Header = () => {
             </NavbarItem>
           </NavbarContent>
 
-          <NavbarContent className="grow-0! hidden lg:flex ">
+          <NavbarContent className="grow-0! ">
             <NavbarItem>
               <LangSwitcher />
             </NavbarItem>
@@ -61,16 +61,12 @@ const Header = () => {
                 </Link>
               </NavbarMenuItem>
             ))}
-
-            <NavbarMenuItem className="lg:hidden">
-              <LangSwitcher />
-            </NavbarMenuItem>
           </NavbarMenu>
         </Navbar>
       </header>
 
       <div className="fixed bottom-0 left-0 w-full bg-primary z-50 lg:hidden border-t border-white/10">
-        <div className="flex justify-center items-center py-4 px-6 gap-6 safe-area-pb">
+        <div className="flex items-center justify-around py-4 px-6 gap-6 safe-area-pb">
           <Contacts />
         </div>
       </div>

@@ -2,7 +2,7 @@ import ServicesListItem from "./ServicesListItem";
 
 const ServicesList = ({ data }) => {
   return (
-    <ul className="servicesList flex flex-col items-center">
+    <ul className="servicesList flex flex-col items-center gap-4 pt-8 pb-8">
       {data.map((item, index) => (
         <ServicesListItem key={index} data={item} />
       ))}

@@ -14,8 +14,9 @@ export default async function Home({ params }) {
   const t = await getTranslations("HomePage");
   return (
     <>
-      <main className="text-main-white">
-        <HeroSection data={first.data} />
+      <main className="">
+        {/* <HeroSection data={first.data} /> */}
+        <HeroSection />
         <Container>
           <WelcomeSection />
           <ServicesSection />

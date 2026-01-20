@@ -17,6 +17,7 @@
   --color-main-white: #ffffff;
   --color-transparent: transparent;
   --radius-main: 5px;
+  --shadow-main: 0 6px 13px -5px var(--tw-shadow-color, var(--color-primary));
 }
 
 html,
