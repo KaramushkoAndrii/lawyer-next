@@ -7,9 +7,9 @@ import Container from "@/components/base/container/Container";
 
 export default async function Home({ params }) {
   const { locale } = await params;
-  const first = await getData("/hero-section", {
-    populate: "cover",
-  });
+  // const first = await getData("/hero-section", {
+  //   populate: "cover",
+  // });
 
   const t = await getTranslations("HomePage");
   return (
