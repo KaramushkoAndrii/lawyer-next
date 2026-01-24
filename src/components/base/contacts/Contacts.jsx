@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Contacts = ({ data }) => {
   return (
-    <ul className="flex items-center gap-2">
+    <ul className="flex items-center gap-8 flex-col lg:flex-row lg:gap-2">
       <li>
         <Link href="tel:+380979863778">0979863778</Link>
       </li>
