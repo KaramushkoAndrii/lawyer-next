@@ -12,9 +12,6 @@ import {
   DropdownTrigger,
   Button,
 } from "@heroui/react";
-// import { Select, SelectItem } from "@heroui/react";
-
-// import "./changeLng.scss";
 
 const LangSwitcher = () => {
   const locale = useLocale();
@@ -33,7 +30,7 @@ const LangSwitcher = () => {
       // are used in combination with a given `pathname`. Since the two will
       // always match for the current route, we can skip runtime checks.
       { pathname, params },
-      { locale: newLocale }
+      { locale: newLocale },
     );
   };
 
@@ -43,7 +40,7 @@ const LangSwitcher = () => {
         <Button
           variant="light"
           size="sm"
-          className="min-w-fit px-2 h-8 text-small font-medium"
+          className="min-w-fit h-8 text-small font-medium text-white"
         >
           {locale == "uk" ? "UA" : locale.toUpperCase()}
         </Button>

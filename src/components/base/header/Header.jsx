@@ -20,7 +20,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <header className="w-screen bg-primary">
+      <header className="w-screen bg-primary text-white">
         <Navbar
           shouldHideOnScroll
           isBordered
@@ -53,7 +53,7 @@ const Header = () => {
             </NavbarItem>
           </NavbarContent>
 
-          <NavbarMenu className="bg-primary/30 backdrop-blur-md">
+          <NavbarMenu className="bg-primary/30 backdrop-blur-md text-white">
             {NavigationList.map((item, index) => (
               <NavbarMenuItem key={`${item}-${index}`}>
                 <Link className="w-full" href={item.url} size="lg">
@@ -65,14 +65,9 @@ const Header = () => {
         </Navbar>
       </header>
 
-      <div className="fixed bg-primary left-auto right-0 bottom-40 z-20 lg:hidden">
+      <div className="fixed left-auto right-3 bottom-40 z-20 lg:hidden">
         <Contacts />
       </div>
-      {/* <div className="fixed bottom-0 left-0 w-full bg-primary z-50 lg:hidden border-t border-white/10">
-        <div className="flex items-center justify-around py-4 px-6 gap-6 safe-area-pb">
-          <Contacts />
-        </div>
-      </div> */}
     </>
   );
 };
