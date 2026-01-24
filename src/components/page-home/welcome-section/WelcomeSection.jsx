@@ -26,13 +26,21 @@ const WelcomeSection = ({ data }) => {
           <Button className={`lg:max-w-full`}>Дивитися відео</Button>
         </div>
       </div>
-      <div className="welcome__img relative w-full aspect-video rounded-main lg:h-full">
-        <Image
-          alt="description"
-          fill
-          src={"/images/MainFoto.webp"}
-          className="object-cover rounded-main"
-        />
+      <div className="welcome__slogan relative">
+        <div className="welcome__img relative w-full aspect-video rounded-main lg:h-full">
+          <Image
+            alt="description"
+            fill
+            src={"/images/MainFoto.webp"}
+            className="object-cover rounded-main"
+          />
+        </div>
+        <div className="absolute w-full bg-amber-950 grid text-center gap-8 p-[3vw] -bottom-[95px] rounded-main text-main-white">
+          <p>Amat Victoria Curam</p>
+          <span className=" text-span before:content-[''] before:bg-main-white before:bottom-16 before:h-px before:w-full before:left-0 before:absolute">
+            Перемога любить підготовку
+          </span>
+        </div>
       </div>
     </section>
   );
