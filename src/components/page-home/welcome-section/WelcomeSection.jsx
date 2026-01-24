@@ -35,7 +35,7 @@ const WelcomeSection = ({ data }) => {
             className="object-cover rounded-main"
           />
         </div>
-        <div className="absolute w-full bg-amber-950 grid text-center gap-8 p-[3vw] -bottom-[15%] rounded-main text-main-white">
+        <div className="absolute w-full bg-amber-950 grid text-center gap-8 p-[3vw] -bottom-[95px] rounded-main text-main-white">
           <p>Amat Victoria Curam</p>
           <span className=" text-span before:content-[''] before:bg-main-white before:bottom-16 before:h-px before:w-full before:left-0 before:absolute">
             Перемога любить підготовку
