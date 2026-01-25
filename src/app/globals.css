@@ -20,6 +20,7 @@
   --shadow-main: 0 6px 13px -5px var(--tw-shadow-color, var(--color-primary));
   --text-slogan: clamp(1rem, 3vw, 5rem);
   --text-span: clamp(0.75rem, 2vw, 1.75rem);
+  --spacing-slogan: clamp(1rem, 3vw, 5rem);
 }
 
 html,

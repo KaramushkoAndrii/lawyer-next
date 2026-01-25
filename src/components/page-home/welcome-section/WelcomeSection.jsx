@@ -1,12 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import Button from "@/components/UI/button/Button";
 const WelcomeSection = ({ data }) => {
   return (
-    <section className="welcome grid mr-auto ml-auto pt-16 pb-16 gap-2 justify-center items-center lg:grid-cols-2">
-      <div className="welcome__info flex flex-col gap-8 pb-6">
-        <h2 className="welcome__title text-5xl">Рясный Владислав</h2>
+    <section className="welcome grid mr-auto ml-auto pt-16 pb-16 gap-2 justify-center items-center lg:grid-cols-2 lg:items-stretch">
+      <div className="welcome__info flex flex-col gap-8 pb-6 lg:gap-12 xl:gap-4">
+        <h2 className="welcome__title text-6xl">Рясный Владислав Денисович</h2>
         <p className="welcome__description">
           Адвокат, який спеціалізується на цивільному, сімейному та
           адміністративному праві.
@@ -21,25 +19,28 @@ const WelcomeSection = ({ data }) => {
           адміністративних справах, справах, що виникають з адміністративних
           правопорушень, та кримінальних справах.
         </p>
-        <div className="welcome__button-group w-full flex flex-col gap-4 items-center">
+        <div className="welcome__button-group w-full flex flex-col gap-4 items-center lg:items-start">
           <Button className={`lg:max-w-full`}>отримати консультацію</Button>
           <Button className={`lg:max-w-full`}>Дивитися відео</Button>
         </div>
       </div>
-      <div className="welcome__slogan relative">
-        <div className="welcome__img relative w-full aspect-video rounded-main lg:h-full">
+      <div className="welcome__slogan relative align-top">
+        <div className="welcome__img relative w-full aspect-video rounded-main lg:h-full lg:aspect-square xl:aspect-video">
           <Image
             alt="description"
             fill
             src={"/images/MainFoto.webp"}
             className="object-cover rounded-main"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
-        </div>
-        <div className="absolute w-full bg-amber-950 grid text-center gap-8 p-[3vw] -bottom-[95px] rounded-main text-main-white">
-          <p>Amat Victoria Curam</p>
-          <span className=" text-span before:content-[''] before:bg-main-white before:bottom-16 before:h-px before:w-full before:left-0 before:absolute">
-            Перемога любить підготовку
-          </span>
+          <div className="absolute -bottom-15 bg-primary rounded-main w-full lg:w-max lg:-bottom-22 lg:-left-12">
+            <p className="flex flex-col text-center p-slogan items-center gap-2 lg:gap-4">
+              Amat Victoria Curam
+              <span className="relative before:absolute before:content-[''] before:h-px before:bg-main-white before:w-full before:-top-1 lg:before:-top-2">
+                Перемога любить підготовку
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </section>

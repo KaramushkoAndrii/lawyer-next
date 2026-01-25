@@ -56,9 +56,7 @@ const LangSwitcher = () => {
         onSelectionChange={handleLanguageChange}
       >
         {routing.locales.map((l) => (
-          <DropdownItem key={l}>
-            {l == "uk" ? "UA" : locale.toUpperCase()}
-          </DropdownItem>
+          <DropdownItem key={l}>{l == "uk" ? "UA" : "RU"}</DropdownItem>
         ))}
       </DropdownMenu>
     </Dropdown>
