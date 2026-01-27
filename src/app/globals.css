@@ -18,15 +18,25 @@
   --color-transparent: transparent;
   --radius-main: 5px;
   --shadow-main: 0 6px 13px -5px var(--tw-shadow-color, var(--color-primary));
+  --shadow-main-large: 0 20px 39px -5px
+    var(--tw-shadow-color, var(--color-primary));
   --text-slogan: clamp(1rem, 3vw, 5rem);
   --text-span: clamp(0.75rem, 2vw, 1.75rem);
+  --text-form: clamp(16px, 1vw, 32px);
   --spacing-slogan: clamp(1rem, 3vw, 5rem);
+  --scale-list-item: 1.05;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  max-width: 100dvw;
   overflow-x: hidden;
+
+  width: 100%;
+
+  min-height: 100vh;
 }
 
 @layer base {

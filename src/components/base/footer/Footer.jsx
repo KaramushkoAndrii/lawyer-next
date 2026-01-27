@@ -5,7 +5,7 @@ import NavigationList from "@/data/navigationList";
 const Footer = () => {
   const t = useTranslations("Navigation");
   return (
-    <footer>
+    <footer className="bg-primary">
       <nav>
         <ul className="p-4 grid grid-cols-3">
           {NavigationList.map((item, index) => (
