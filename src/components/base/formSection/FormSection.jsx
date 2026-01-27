@@ -21,20 +21,25 @@ const FormSection = () => {
           <h3>Владислав Рясний</h3>
           <p>Залиште заявку на юридичну допомогу прямо зараз</p>
         </div>
-        <Form className="gap-4">
+        <Form className="gap-4 lg:flex-row lg:justify-center lg:items-center">
           <Input
             type="tel"
             name="number"
             label="here is your phone"
             errorMessage="number is not valid"
+            className="lg:max-w-[30dvw]"
+            classNames={{ input: "text-form" }}
           />
           <Button type="submit" className="w-full">
             Submit
           </Button>
         </Form>
-        <ul className="advantage-list flex gap-4 justify-between">
+        <ul className="advantage-list flex flex-col gap-4 justify-center lg:flex-row lg:gap-12 xl:gap24">
           {advatageList.map((item, index) => (
-            <li key={index}>{item.text}</li>
+            <li key={index} className="flex gap-1 justify-center items-center">
+              <i className="text-primary">{item.icon}</i>
+              {item.text}
+            </li>
           ))}
         </ul>
       </div>

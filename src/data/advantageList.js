@@ -1,15 +1,19 @@
+import { MdAttachMoney } from "react-icons/md";
+import { IoIosTimer } from "react-icons/io";
+import { BsGeoAlt } from "react-icons/bs";
+
 const advatageList = [
   {
     text: "TRUE PRICE",
-    icon: "",
+    icon: <MdAttachMoney size={16} />,
   },
   {
     text: "FAST RESULT",
-    icon: "",
+    icon: <IoIosTimer size={16} />,
   },
   {
     text: "ONLINE/OFLINE",
-    icon: "",
+    icon: <BsGeoAlt size={16} />,
   },
 ];
 

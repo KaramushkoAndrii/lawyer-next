@@ -20,50 +20,50 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <header className="w-screen bg-primary text-white">
-        <Navbar
-          shouldHideOnScroll
-          isBordered
-          isMenuOpen={isMenuOpen}
-          onMenuOpenChange={setIsMenuOpen}
-        >
-          <NavbarContent className="lg:hidden" justify="start">
-            <NavbarMenuToggle
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            />
-          </NavbarContent>
+      <Navbar
+        isBordered
+        shouldHideOnScroll
+        isMenuOpen={isMenuOpen}
+        onMenuOpenChange={setIsMenuOpen}
+        maxWidth="full"
+        className=" bg-primary text-white"
+      >
+        <NavbarContent className="lg:hidden" justify="start">
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
+        </NavbarContent>
 
-          <NavbarContent className="hidden lg:flex">
-            {NavigationList.map((item, index) => (
-              <NavbarItem key={index}>
-                <Link href={item.url}>{t(item.name)}</Link>
-              </NavbarItem>
-            ))}
-          </NavbarContent>
-
-          <NavbarContent justify="end" className="hidden lg:flex">
-            <NavbarItem>
-              <Contacts />
+        <NavbarContent className="hidden lg:flex">
+          {NavigationList.map((item, index) => (
+            <NavbarItem key={index}>
+              <Link href={item.url}>{t(item.name)}</Link>
             </NavbarItem>
-          </NavbarContent>
+          ))}
+        </NavbarContent>
 
-          <NavbarContent className="grow-0! ">
-            <NavbarItem>
-              <LangSwitcher />
-            </NavbarItem>
-          </NavbarContent>
+        <NavbarContent justify="end" className="hidden lg:flex">
+          <NavbarItem>
+            <Contacts />
+          </NavbarItem>
+        </NavbarContent>
 
-          <NavbarMenu className="bg-primary/30 backdrop-blur-md text-white">
-            {NavigationList.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link className="w-full" href={item.url} size="lg">
-                  {t(item.name)}
-                </Link>
-              </NavbarMenuItem>
-            ))}
-          </NavbarMenu>
-        </Navbar>
-      </header>
+        <NavbarContent className="grow-0! ">
+          <NavbarItem>
+            <LangSwitcher />
+          </NavbarItem>
+        </NavbarContent>
+
+        <NavbarMenu className="bg-primary/30 backdrop-blur-md text-white">
+          {NavigationList.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link className="w-full" href={item.url} size="lg">
+                {t(item.name)}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      </Navbar>
 
       <div className="fixed left-auto right-3 bottom-40 z-20 lg:hidden">
         <Contacts />

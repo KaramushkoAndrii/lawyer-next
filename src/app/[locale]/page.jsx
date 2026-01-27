@@ -15,7 +15,6 @@ export default async function Home({ params }) {
   return (
     <>
       <main className="">
-        {/* <HeroSection data={first.data} /> */}
         <HeroSection />
         <Container>
           <WelcomeSection />
