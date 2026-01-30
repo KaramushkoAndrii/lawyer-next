@@ -1,6 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Button from "@/components/UI/button/Button";
+
+import { useModalStore } from "@/store/useModalStore";
 const WelcomeSection = ({ data }) => {
+  const { openModal } = useModalStore();
   return (
     <section className="welcome grid mr-auto ml-auto pt-16 pb-16 gap-2 justify-center items-center lg:grid-cols-2 lg:items-stretch">
       <div className="welcome__info flex flex-col gap-8 pb-6 lg:gap-12 xl:gap-4">
@@ -20,7 +25,9 @@ const WelcomeSection = ({ data }) => {
           правопорушень, та кримінальних справах.
         </p>
         <div className="welcome__button-group w-full flex flex-col gap-4 items-center lg:items-start">
-          <Button className={`lg:max-w-full`}>отримати консультацію</Button>
+          <Button className={`lg:max-w-full`} onPress={openModal}>
+            отримати консультацію
+          </Button>
           <Button className={`lg:max-w-full`}>Дивитися відео</Button>
         </div>
       </div>
