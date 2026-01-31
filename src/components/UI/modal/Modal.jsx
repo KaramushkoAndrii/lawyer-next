@@ -82,7 +82,7 @@ const Modal = () => {
             </span>
           </form>
         </ModalBody>
-        <ModalFooter className="flex justify-around">
+        <ModalFooter className="flex justify-between">
           <div className="flex flex-col">
             <span className="text-primary">email</span>
             <span>karamushko1997@gmail.com</span>
