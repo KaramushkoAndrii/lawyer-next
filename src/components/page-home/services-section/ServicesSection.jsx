@@ -1,7 +1,15 @@
+"use client";
+
 import Button from "@/components/UI/button/Button";
 import ServicesList from "./ServicesList";
+import { useModalStore } from "@/store/useModalStore";
 
 const ServicesSection = () => {
+  const { openModal } = useModalStore();
+
+  const openHandler = () => {
+    openModal();
+  };
   const d = [
     { href: "/", title: "Заголовок 1" },
     { href: "/", title: "Заголовок 2" },
@@ -20,7 +28,9 @@ const ServicesSection = () => {
           Не знайшли те, що шукали? Всі проблеми в кількох пунктах не описати,
           натисніть нижче та уточнюйте інформацію виключно з Вашого питання.
         </p>
-        <Button className={`lg:max-w-full`}>Текст для кнопки</Button>
+        <Button className={`lg:max-w-full`} onPress={openHandler}>
+          Текст для кнопки
+        </Button>
       </div>
     </section>
   );
