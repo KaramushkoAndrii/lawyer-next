@@ -4,8 +4,18 @@ import { Form, Input } from "@heroui/react";
 import Button from "@/components/UI/button/Button";
 import Image from "next/image";
 import advatageList from "@/data/advantageList";
+import { useForm } from "react-hook-form";
 
 const FormSection = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+  });
+
+  const onSubmit = (data) => console.log(data);
   return (
     <section className="form-section relative text-main-white pt-16 pr-8 pb-16 pl-8">
       <Image
@@ -21,14 +31,24 @@ const FormSection = () => {
           <h3>Владислав Рясний</h3>
           <p>Залиште заявку на юридичну допомогу прямо зараз</p>
         </div>
-        <Form className="gap-4 lg:flex-row lg:justify-center lg:items-center">
+        <Form
+          className="gap-4 lg:flex-row lg:justify-center lg:items-center"
+          onSubmit={handleSubmit(onSubmit)}
+        >
           <Input
             type="tel"
             name="number"
             label="here is your phone"
-            errorMessage="number is not valid"
             className="lg:max-w-[30dvw]"
             classNames={{ input: "text-form" }}
+            {...register("tel", {
+              pattern: {
+                value: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
+                message: "Номер не коректный",
+              },
+            })}
+            isInvalid={!!errors.tel}
+            errorMessage={errors.tel?.message}
           />
           <Button type="submit" className="w-full">
             Submit

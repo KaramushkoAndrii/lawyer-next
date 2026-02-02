@@ -2,9 +2,12 @@
 
 import Image from "next/image";
 import Button from "@/components/UI/button/Button";
+import { useModalStore } from "@/store/useModalStore";
 
 const HeroSection = ({ data }) => {
   // const { title, description, cover } = data;
+
+  const { openModal } = useModalStore();
   return (
     <section className={`hero-section relative min-w-screen min-h-screen`}>
       <Image
@@ -30,6 +33,7 @@ const HeroSection = ({ data }) => {
         <div className="hero-section__button-group flex flex-col gap-4 w-full items-center justify-center lg:flex-row">
           <Button>Обговорити завдання</Button>
           <Button>Дізнатись більше</Button>
+          <Button onPress={openModal}>mODAL</Button>
         </div>
       </div>
     </section>
