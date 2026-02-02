@@ -46,7 +46,12 @@ const Modal = () => {
     >
       <ModalContent className="p-0 overflow-hidden my-0">
         <div className="modal__header relative aspect-2/1 flex flex-col justify-center">
-          <Image src={"/images/main.webp"} alt="modal image" fill />
+          <Image
+            src={"/images/main.webp"}
+            alt="modal image"
+            fill
+            className="object-cover"
+          />
           <h2 className="relative z-50 text-main-white text-center">
             З клієнтами на звязку 24/7
           </h2>

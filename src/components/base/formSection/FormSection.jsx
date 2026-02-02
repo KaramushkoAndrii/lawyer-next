@@ -39,7 +39,6 @@ const FormSection = () => {
             type="tel"
             name="number"
             label="here is your phone"
-            // errorMessage="number is not valid"
             className="lg:max-w-[30dvw]"
             classNames={{ input: "text-form" }}
             {...register("tel", {
