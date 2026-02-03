@@ -19,12 +19,10 @@ const HeroSection = ({ data }) => {
       />
 
       <div className="absolute inset-0 bg-black/70 -z-10" />
-      <div className="hero-section__content ml-6 mr-6 flex flex-col justify-center items-center h-dvh text-center text-white">
+      <div className="hero-section__content ml-6 mr-6 flex flex-col justify-evenly items-center h-dvh text-center text-white">
         <div className="hero-section__content--content mb-10">
-          {/* <h1 className="hero-section__title text-5xl">{title}</h1> */}
           <h1 className="hero-section__title text-5xl">Владислав Рясний</h1>
 
-          {/* <p className="hero-section__description text-2xl">{description}</p> */}
           <p className="hero-section__description text-2xl">
             адвокат у сфері цивільного, військового, кримінального,
             адміністративного та сімейного права
