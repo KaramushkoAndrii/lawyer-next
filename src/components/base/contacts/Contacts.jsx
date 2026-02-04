@@ -10,9 +10,7 @@ import {
 import Link from "next/link";
 import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
-import { PiTelegramLogoLight } from "react-icons/pi";
-import { FaViber } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
+import SocialList from "@/data/social";
 
 const Contacts = ({ data }) => {
   return (
@@ -39,30 +37,14 @@ const Contacts = ({ data }) => {
             </Button>
           </DropdownTrigger>
           <DropdownMenu>
-            <DropdownItem>
-              <Link href="/" className="flex items-center gap-4">
-                <i>
-                  <PiTelegramLogoLight size={22} />
-                </i>
-                <span>telegram</span>
-              </Link>
-            </DropdownItem>
-            <DropdownItem>
-              <Link href="/" className="flex items-center gap-4">
-                <i>
-                  <FaViber size={22} />
-                </i>
-                <span>viber</span>
-              </Link>
-            </DropdownItem>
-            <DropdownItem>
-              <Link href="/" className="flex items-center gap-4">
-                <i>
-                  <FaWhatsapp size={22} />
-                </i>
-                <span>whatsap</span>
-              </Link>
-            </DropdownItem>
+            {SocialList.map((item) => (
+              <DropdownItem key={item.id}>
+                <Link href={item.url} className="flex items-center gap-4">
+                  <i>{item.icon}</i>
+                  <span>{item.name}</span>
+                </Link>
+              </DropdownItem>
+            ))}
           </DropdownMenu>
         </Dropdown>
       </li>

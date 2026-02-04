@@ -14,10 +14,19 @@ import { useTranslations } from "next-intl";
 import NavigationList from "@/data/navigationList";
 import LangSwitcher from "@/components/base/langSwitcher/LangSwitcher";
 import Contacts from "../contacts/Contacts";
+import { FaWpforms } from "react-icons/fa";
+import Button from "@/components/UI/button/Button";
+import { useModalStore } from "@/store/useModalStore";
+import SocialList from "@/data/social";
 
 const Header = () => {
   const t = useTranslations("Navigation");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { openModal } = useModalStore();
+
+  const openHandler = () => {
+    openModal();
+  };
   return (
     <>
       <Navbar
@@ -48,13 +57,13 @@ const Header = () => {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarContent className="grow-0! ">
+        <NavbarContent className="grow-0! hidden lg:flex">
           <NavbarItem>
             <LangSwitcher />
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarMenu className="bg-primary/30 backdrop-blur-md text-white">
+        <NavbarMenu className="bg-primary/30 backdrop-blur-md text-white items-center justify-center gap-10">
           {NavigationList.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link className="w-full" href={item.url} size="lg">
@@ -62,6 +71,22 @@ const Header = () => {
               </Link>
             </NavbarMenuItem>
           ))}
+          <ul className="flex flex-row gap-4">
+            {SocialList.map((item) => (
+              <li
+                key={item.id}
+                className={`p-2 rounded-[50%] ${item.iconColor}`}
+              >
+                <Link href={item.url}>{item.icon}</Link>
+              </li>
+            ))}
+          </ul>
+          <NavbarMenuItem className="flex gap-4 items-center">
+            <LangSwitcher />
+            <Button className="p-0 w-fit h-full" onPress={openHandler}>
+              <FaWpforms />
+            </Button>
+          </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
 
