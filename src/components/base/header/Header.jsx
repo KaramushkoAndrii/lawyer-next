@@ -83,7 +83,11 @@ const Header = () => {
           </ul>
           <NavbarMenuItem className="flex gap-4 items-center">
             <LangSwitcher />
-            <Button className="p-0 w-fit h-full" onPress={openHandler}>
+            <Button
+              size="sm"
+              className="p-0 w-fit h-full"
+              onPress={openHandler}
+            >
               <FaWpforms />
             </Button>
           </NavbarMenuItem>

@@ -4,7 +4,6 @@ import {
   Modal as HeroModal,
   ModalContent,
   ModalBody,
-  ModalHeader,
   ModalFooter,
   Input,
   Textarea,
@@ -12,6 +11,8 @@ import {
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Button from "../button/Button";
+import ContactsList from "@/data/contacts";
+import Link from "next/link";
 
 import { useModalStore } from "@/store/useModalStore";
 
@@ -93,14 +94,17 @@ const Modal = () => {
           </form>
         </ModalBody>
         <ModalFooter className="flex flex-col justify-between lg:flex-row">
-          <div className="flex flex-col">
-            <span className="text-primary">email</span>
-            <span>karamushko1997@gmail.com</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-primary">number of phone</span>
-            <span>0979863778</span>
-          </div>
+          <Link
+            href={`mailto:${ContactsList[0].url}`}
+            className="flex flex-col"
+          >
+            <span className="text-primary">{ContactsList[0].name}</span>
+            <span>{ContactsList[0].url}</span>
+          </Link>
+          <Link href={`tel:${ContactsList[1].url}`} className="flex flex-col">
+            <span className="text-primary">{ContactsList[1].name}</span>
+            <span>{ContactsList[1].url}</span>{" "}
+          </Link>
         </ModalFooter>
       </ModalContent>
     </HeroModal>

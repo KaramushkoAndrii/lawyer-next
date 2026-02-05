@@ -35,7 +35,7 @@ const LangSwitcher = () => {
   };
 
   return (
-    <Dropdown>
+    <Dropdown className="w-20 min-w-12.5">
       <DropdownTrigger>
         <Button
           variant="solid"
