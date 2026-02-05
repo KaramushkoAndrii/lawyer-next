@@ -1,11 +1,7 @@
-"use client";
-
 import Image from "next/image";
-import Button from "@/components/UI/button/Button";
-import { useModalStore } from "@/store/useModalStore";
+import HeroButtonsGroup from "./HeroButtonsGroup";
 
 const HeroSection = ({ data }) => {
-  const { openModal } = useModalStore();
   return (
     <section className={`hero-section relative min-w-screen min-h-screen`}>
       <Image
@@ -26,10 +22,10 @@ const HeroSection = ({ data }) => {
             адміністративного та сімейного права
           </p>
         </div>
-        <div className="hero-section__button-group flex flex-col gap-4 w-full items-center justify-center lg:flex-row">
-          <Button onPress={openModal}>Обговорити завдання</Button>
-          <Button variant="ghost">Дізнатись більше</Button>
-        </div>
+        <HeroButtonsGroup
+          textModal={"Открыть модалку"}
+          textMore={"Узнать больше"}
+        />
       </div>
     </section>
   );
