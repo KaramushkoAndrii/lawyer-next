@@ -39,7 +39,7 @@ const Modal = () => {
       classNames={{
         wrapper: "w-full p-6 overflow-visible",
         closeButton: "z-50 text-white hover:bg-white/20 right-4 top-4",
-        backdrop: "bg-primary/30 backdrop-blur-md",
+        backdrop: "bg-primary/50 backdrop-blur-md",
         base: "mx-4 rounded-2xl",
       }}
       size="xl"
