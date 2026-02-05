@@ -23,9 +23,5 @@ export default async function InnerLayout({ children, params }) {
         <main className="col-span-3">{children}</main>
       </div>
     </body>
-    // <div className="grid grid-cols-4">
-    //   <AsideCard />
-    //   <main className="col-span-3">{children}</main>
-    // </div>
   );
 }

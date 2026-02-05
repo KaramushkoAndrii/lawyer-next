@@ -4,7 +4,6 @@ import {
   Modal as HeroModal,
   ModalContent,
   ModalBody,
-  ModalHeader,
   ModalFooter,
   Input,
   Textarea,
@@ -12,6 +11,8 @@ import {
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Button from "../button/Button";
+import ContactsList from "@/data/contacts";
+import Link from "next/link";
 
 import { useModalStore } from "@/store/useModalStore";
 
@@ -36,13 +37,16 @@ const Modal = () => {
       onOpenChange={onOpenChange}
       backdrop="blur"
       classNames={{
+        wrapper: "w-full p-6 overflow-visible",
         closeButton: "z-50 text-white hover:bg-white/20 right-4 top-4",
         backdrop: "bg-primary/30 backdrop-blur-md",
+        base: "mx-4 rounded-2xl",
       }}
       size="xl"
-      className="overflow-visible"
-      placement="center"
+      className="hero_modal overflow-visible m-10"
+      placement="top-center"
       onClose={handlerClose}
+      scrollBehavior="outside"
     >
       <ModalContent className="p-0 overflow-hidden my-0">
         <div className="modal__header relative aspect-2/1 flex flex-col justify-center">
@@ -67,7 +71,7 @@ const Modal = () => {
               placeholder="enter your question"
               {...register("message")}
             />
-            <span className="flex flex-row gap-4 justify-center items-center">
+            <span className="flex flex-col gap-4 justify-center items-center lg:flex-row">
               <Input
                 label="your phone"
                 placeholder="0979863778"
@@ -83,19 +87,24 @@ const Modal = () => {
                 isInvalid={!!errors.tel}
                 errorMessage={errors.tel?.message}
               />
-              <Button type="submit">click</Button>
+              <Button type="submit" className="w-full">
+                click
+              </Button>
             </span>
           </form>
         </ModalBody>
-        <ModalFooter className="flex justify-between">
-          <div className="flex flex-col">
-            <span className="text-primary">email</span>
-            <span>karamushko1997@gmail.com</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-primary">number of phone</span>
-            <span>0979863778</span>
-          </div>
+        <ModalFooter className="flex flex-col justify-between lg:flex-row">
+          <Link
+            href={`mailto:${ContactsList[0].url}`}
+            className="flex flex-col"
+          >
+            <span className="text-primary">{ContactsList[0].name}</span>
+            <span>{ContactsList[0].url}</span>
+          </Link>
+          <Link href={`tel:${ContactsList[1].url}`} className="flex flex-col">
+            <span className="text-primary">{ContactsList[1].name}</span>
+            <span>{ContactsList[1].url}</span>{" "}
+          </Link>
         </ModalFooter>
       </ModalContent>
     </HeroModal>

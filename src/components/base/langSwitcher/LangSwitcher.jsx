@@ -35,12 +35,12 @@ const LangSwitcher = () => {
   };
 
   return (
-    <Dropdown>
+    <Dropdown className="w-20 min-w-12.5">
       <DropdownTrigger>
         <Button
-          variant="light"
+          variant="solid"
           size="sm"
-          className="min-w-fit h-8 text-small font-medium text-white"
+          className="min-w-fit h-8 text-small font-medium text-white bg-primary"
         >
           {locale == "uk" ? "UA" : locale.toUpperCase()}
         </Button>
