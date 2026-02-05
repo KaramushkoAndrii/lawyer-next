@@ -20,7 +20,7 @@ const ServicesSection = () => {
     { href: "/", title: "Заголовок 7" },
   ];
   return (
-    <section className="services container m-auto pb-16 pt-16">
+    <section className="services container m-auto pb-16 pt-16 px-8">
       <h2 className="text-2xl"> Основні сервіси</h2>
       <ServicesList data={d} />
       <div className="services__request flex flex-col text-center gap-4 items-center justify-center lg:flex-row lg:text-start">

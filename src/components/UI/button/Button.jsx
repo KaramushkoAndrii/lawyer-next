@@ -8,16 +8,17 @@ const Button = ({
   className,
   type = "button",
   size = "sm",
+  variant = "shadow",
   ...props
 }) => {
   return (
     <HeroButton
       color="primary"
       radius="sm"
-      variant="shadow"
+      variant={variant}
       type={type}
       {...props}
-      className={`${styles.button_main} text-main-white     w-[75%] lg:max-w-40 ${className}`}
+      className={`${styles.button_main} text-main-white  h-10 w-[75%] md:h-12 lg:h-13 lg:max-w-40 ${className}`}
       size={size}
     >
       {children}
