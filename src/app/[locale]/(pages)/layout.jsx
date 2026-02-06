@@ -1,4 +1,5 @@
 import AsideCard from "@/components/base/asideCard/AsideCard";
+import Container from "@/components/base/container/Container";
 import Image from "next/image";
 
 export default async function InnerLayout({ children, params }) {
@@ -18,10 +19,12 @@ export default async function InnerLayout({ children, params }) {
         </h2>
       </section>
 
-      <div className="grid grid-cols-4">
-        <AsideCard />
-        <main className="col-span-3">{children}</main>
-      </div>
+      <Container>
+        <div className="grid grid-cols-4 gap-16">
+          <AsideCard />
+          <main className="col-span-3">{children}</main>
+        </div>
+      </Container>
     </body>
   );
 }

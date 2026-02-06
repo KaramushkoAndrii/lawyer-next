@@ -13,8 +13,7 @@ const AsideCard = () => {
     openModal();
   };
   return (
-    <aside className="hidden bg-secondary/40 rounded-main lg:flex lg:flex-col gap-4 justify-center items-center p-4">
-      {/* <div className="aside-foto"></div> */}
+    <aside className="hidden bg-secondary/40 rounded-main lg:flex lg:flex-col gap-4 justify-center items-center px-4 py-8 max-h-fit max-w-[25dvw] min-w-[20dvw] sticky top-30">
       <Avatar src="/images/MainFoto.webp" alt="vlad" className="w-20 h-20" />
       <h3 className="aside-title">Рясний Владислав Денисович</h3>
       <div className="aside-contacts">
@@ -35,7 +34,9 @@ const AsideCard = () => {
           </li>
         </ul>
       </div>
-      <p className="aside-description">Адвокат, керівник судової практики</p>
+      <p className="aside-description text-center">
+        Адвокат, керівник судової практики
+      </p>
       <Button onPress={openHandler}>Звязатись зараз</Button>
     </aside>
   );
