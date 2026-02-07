@@ -5,7 +5,7 @@ export const routing = defineRouting({
   locales: ["uk", "ru"],
   defaultLocale: "uk",
 
-  pathname: {
+  pathnames: {
     "/": "/",
     "/build": {
       ru: "/stroitelsvo",
