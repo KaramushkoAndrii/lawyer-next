@@ -5,14 +5,14 @@ import ServicesList from "./ServicesList";
 const ServicesSection = () => {
   const d = [
     { href: "/build", title: "Нерухомість та будівництво" },
-    { href: "/", title: "Сімейні справи" },
-    { href: "/", title: "Військове право" },
-    { href: "/", title: "Послуги адвоката" },
-    { href: "/", title: "Повернення боргів" },
-    { href: "/", title: "Юридичний захист боржників" },
-    { href: "/", title: "Трудове право" },
-    { href: "/", title: "Адміністративне право" },
-    { href: "/", title: "Справи про адміністративне правопорушення" },
+    { href: "/family", title: "Сімейні справи" },
+    { href: "/military", title: "Військове право" },
+    { href: "/lawyer", title: "Послуги адвоката" },
+    { href: "/duty", title: "Повернення боргів" },
+    { href: "/protection", title: "Юридичний захист боржників" },
+    { href: "/worker", title: "Трудове право" },
+    { href: "/law", title: "Адміністративне право" },
+    { href: "/violation", title: "Справи про адміністративне правопорушення" },
   ];
 
   const servicesText = (

@@ -20,9 +20,9 @@ export default async function InnerLayout({ children, params }) {
       </section>
 
       <Container>
-        <div className="grid grid-cols-4 gap-16">
+        <div className="grid lg:grid-cols-4 gap-16">
           <AsideCard />
-          <main className="col-span-3">{children}</main>
+          <main className="lg:col-span-3">{children}</main>
         </div>
       </Container>
     </>
