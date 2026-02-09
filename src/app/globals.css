@@ -41,6 +41,7 @@
   --text-form: clamp(16px, 1vw, 32px);
   --spacing-slogan: clamp(1rem, 3vw, 5rem);
   --scale-list-item: 1.05;
+  --scale-button: 1.05;
 }
 
 html {
