@@ -15,18 +15,13 @@ import NavigationList from "@/data/navigationList";
 import LangSwitcher from "@/components/base/langSwitcher/LangSwitcher";
 import Contacts from "../contacts/Contacts";
 import { FaWpforms } from "react-icons/fa";
-import Button from "@/components/UI/button/Button";
-import { useModalStore } from "@/store/useModalStore";
+import ModalButton from "@/components/UI/modalButton/ModalButton";
 import SocialList from "@/data/social";
 
 const Header = () => {
   const t = useTranslations("Navigation");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { openModal } = useModalStore();
 
-  const openHandler = () => {
-    openModal();
-  };
   return (
     <>
       <Navbar
@@ -83,13 +78,9 @@ const Header = () => {
           </ul>
           <NavbarMenuItem className="flex gap-4 items-center">
             <LangSwitcher />
-            <Button
-              size="sm"
-              className="p-0 w-fit h-full"
-              onPress={openHandler}
-            >
+            <ModalButton size="sm" className="p-0 w-fit h-full">
               <FaWpforms />
-            </Button>
+            </ModalButton>
           </NavbarMenuItem>
         </NavbarMenu>
       </Navbar>
