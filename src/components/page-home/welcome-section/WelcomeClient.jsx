@@ -24,7 +24,7 @@ const WelcomeClient = ({ children, btnText }) => {
       <div className="welcome__info flex flex-col gap-8 pb-6 lg:gap-12 xl:gap-4">
         {children}
         <div className="welcome__button-group w-full flex flex-col gap-4 items-center lg:items-start">
-          <ModalButton className={`lg:max-w-full`}>{btnText}</ModalButton>
+          <ModalButton className={`mx-0 lg:max-w-full`}>{btnText}</ModalButton>
           <Button className={`lg:max-w-full`} onPress={handleMediaChanger}>
             {viewVideo ? "Назад" : "Дивитися відео"}
           </Button>

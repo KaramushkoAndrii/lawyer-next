@@ -24,7 +24,7 @@ const Contacts = ({ data }) => {
         </Link>
       </li>
       <li>
-        <Dropdown>
+        <Dropdown shouldBlockScroll={false}>
           <DropdownTrigger>
             <Button
               className="bg-primary p-4 h-auto min-w-0 text-white"

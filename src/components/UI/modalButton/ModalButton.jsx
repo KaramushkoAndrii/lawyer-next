@@ -24,7 +24,7 @@ const ModalButton = ({
       variant={variant}
       type={type}
       {...props}
-      className={`text-main-white flex  h-10 w-[75%] md:h-12 lg:h-13 lg:max-w-40 ${className} hover:scale-button`}
+      className={`text-main-white flex h-10 w-[75%] mx-auto md:h-12 lg:h-13 lg:max-w-40 ${className} hover:scale-button`}
       size={size}
     >
       {children}
