@@ -1,7 +1,7 @@
 import AsideCard from "@/components/base/asideCard/AsideCard";
 import Container from "@/components/base/container/Container";
-import RecomendList from "../recomendSection/RecomendList";
 import RecomendListData from "@/data/recomendList";
+import RecomendSection from "@/components/UI/recomendSection/RecomendSection";
 
 const PageWithAside = ({ children }) => {
   return (
@@ -10,7 +10,7 @@ const PageWithAside = ({ children }) => {
         <AsideCard />
         <main className="lg:col-span-3">
           {children}
-          <RecomendList list={RecomendListData} />
+          <RecomendSection list={RecomendListData} />
         </main>
       </div>
     </Container>

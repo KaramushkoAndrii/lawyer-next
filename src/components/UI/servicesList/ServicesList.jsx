@@ -3,7 +3,7 @@ import ServicesListItem from "./ServicesListItem";
 const ServicesList = ({ title, listData, footer }) => {
   return (
     <>
-      <h2>{title}</h2>
+      <h2 className="custom-h2 text-center md:text-start">{title}</h2>
       <ul className="grid gap-6 mt-4 mb-4 lg:grid-cols-2 ">
         {listData.map((item) => (
           <ServicesListItem key={item.id} src={item.src} text={item.text} />
