@@ -71,7 +71,7 @@ const Modal = () => {
               placeholder="enter your question"
               {...register("message")}
             />
-            <span className="flex flex-col gap-4 justify-center items-center lg:flex-row">
+            <span className="text-span flex flex-col gap-4 justify-center items-center lg:flex-row">
               <Input
                 label="your phone"
                 placeholder="0979863778"
@@ -102,8 +102,10 @@ const Modal = () => {
             <span>{ContactsList[0].url}</span>
           </Link>
           <Link href={`tel:${ContactsList[1].url}`} className="flex flex-col">
-            <span className="text-primary">{ContactsList[1].name}</span>
-            <span>{ContactsList[1].url}</span>{" "}
+            <span className="text-primary text-span">
+              {ContactsList[1].name}
+            </span>
+            <span className="text-span">{ContactsList[1].url}</span>{" "}
           </Link>
         </ModalFooter>
       </ModalContent>
