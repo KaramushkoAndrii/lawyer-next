@@ -2,6 +2,7 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
+import Heading from "@/components/UI/heading/Heading";
 import { Link } from "@/i18n/routing";
 
 export default function DutyPage() {
@@ -9,9 +10,7 @@ export default function DutyPage() {
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">
-          Стягнення боргу за борговою розпискою
-        </h2>
+        <Heading>Стягнення боргу за борговою розпискою</Heading>
         <p>
           Останнім часом склалась така соціально-економічна ситуація, при якій
           велика кількість громадян отримують грошові кошти в борг та їх не
@@ -19,10 +18,10 @@ export default function DutyPage() {
           кредитний договір з банком, підписати договір позики або отримати
           гроші під розписку.
         </p>
-        <h3 className="custom-h3">
+        <Heading level="h3" align="start">
           Чому варто звернутися за допомогою до адвоката, в справі про
           повернення боргу?
-        </h3>
+        </Heading>
         <p>
           В разі якщо ви позичили гроші у борг, а боржник їх не повертає, вам
           необхідно звернутись до адвоката, який спеціалізується на стягненні
@@ -32,7 +31,9 @@ export default function DutyPage() {
           (шахрайство), щодо боржника, з метою повернення коштів.
         </p>
         <ImgContainer src="/images/main.webp" alt="duty" />
-        <h3 className="custom-h3">Як адвокат допоможе із поверненням боргу?</h3>
+        <Heading level="h3" align="start">
+          Як адвокат допоможе із поверненням боргу?
+        </Heading>
         <p>
           Для того щоб повернути ваш борг, за борговою розпискою, адвокат
           здійснить ретельний юридичний аналіз документів, зокрема боргову

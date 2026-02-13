@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Heading from "../heading/Heading";
 
 const MainSection = ({
   alt = "картитнка",
@@ -9,9 +10,16 @@ const MainSection = ({
     <div className="relative w-full h-dvh">
       <Image alt={alt} src={src} fill className="-z-20 object-cover" />
       <div className="absolute top-0 left-0 -z-10 inset-0 content-[''] bg-secondary/70"></div>
-      <h2 className="flex justify-center items-center h-full text-white custom-h1">
+      <Heading
+        level="h1"
+        align="center"
+        className="flex justify-center items-center h-full text-white"
+      >
         {title}
-      </h2>
+      </Heading>
+      {/* <h1 className="flex justify-center items-center h-full text-white custom-h1">
+        {title}
+      </h1> */}
     </div>
   );
 };

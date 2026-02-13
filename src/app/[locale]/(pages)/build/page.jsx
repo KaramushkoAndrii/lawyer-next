@@ -3,6 +3,7 @@ import ServicesList from "@/components/UI/servicesList/ServicesList";
 import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesData from "@/data/servicesData";
+import Heading from "@/components/UI/heading/Heading";
 
 // 1. Метаданные экспортируем как именованную константу (НЕ default)
 export const metadata = {
@@ -16,9 +17,7 @@ export default function BuildPage() {
       <MainSection />
       <PageWithAside>
         <>
-          <h2 className="custom-h2 text-center md:text:start">
-            Адвокат з нерухомості та житлових спорів
-          </h2>
+          <Heading>Адвокат з нерухомості та житлових</Heading>
           <p>
             Адвокат у сфері нерухомості – це спеціаліст, який забезпечує захист
             прав та інтересів клієнта під час здійснення правочинів щодо
@@ -40,9 +39,10 @@ export default function BuildPage() {
 
           <ImgContainer src={"/images/main.webp"} alt={"just for test"} />
 
-          <h3 className="custom-h3">
+          <Heading level={"h3"} align="start">
             Які існують види порушень пов`язаних з нерухомим майном?
-          </h3>
+          </Heading>
+
           <ul className="custom-list-disc-inside">
             <li>Встановлення права власності на самовільно зведений обєкт.</li>
             <li>Розподіл нерухомого майна між співвласниками.</li>
@@ -55,19 +55,20 @@ export default function BuildPage() {
             </li>
             <li>Визнання договору оренди нерухомого майна недійсним.</li>
           </ul>
-          <h3 className="custom-h3 text-center">
+          <Heading level="h3" align="center">
             Вказаний вище перелік послуг не є вичерпним
-          </h3>
+          </Heading>
           <p>
             Консультація адвоката з питань нерухомості забезпечить впевненість у
             тому, що дії клієнта будуть чітко координуватися професіоналом.
             Адвокат візьме на себе ведення справи на всіх її етапах, включаючи
             підготовку та оформлення необхідних документів.
           </p>
-          <h3 className="custom-h3">
+
+          <Heading level="h3" align="start">
             Адвокат Рясний Владислав Денисович надасть вам юридичну допомогу
             шляхом:
-          </h3>
+          </Heading>
           <ul className="custom-list-disc-inside">
             <li>
               надасть юридичну консультацію та здійснить розробку індивідуальної
@@ -91,9 +92,11 @@ export default function BuildPage() {
               апеляційній та касаційній інстанціях;
             </li>
           </ul>
-          <h3 className="custom-h3 text-center">
+
+          <Heading level="h3" align="center">
             Вказаний вище перелік послуг не є вичерпним
-          </h3>
+          </Heading>
+
           <ServicesList
             listData={ServicesData}
             title={"Послуги адвоката"}

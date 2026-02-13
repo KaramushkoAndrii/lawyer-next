@@ -4,13 +4,14 @@ import ModalButton from "@/components/UI/modalButton/ModalButton";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ServicesData from "@/data/servicesData";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function MilitaryPage() {
   return (
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">Військове право</h2>
+        <Heading>Військове право</Heading>
         <p>
           У сучасних умовах багато українців стикаються з правовими питаннями,
           повязаними з військовою службою та захистом своїх прав як
@@ -21,9 +22,11 @@ export default function MilitaryPage() {
           чи після її завершення. Професійна допомога військового адвоката може
           стати ключовим фактором у вирішенні ваших правових проблем.
         </p>
-        <h3 className="custom-h3">
+
+        <Heading level="h3" align="center">
           Основні обовязки військового адвоката включають:
-        </h3>
+        </Heading>
+
         <ul className="custom-list-disc-inside">
           <li>
             Консультації з військового права: Надання правових консультацій з
@@ -62,13 +65,17 @@ export default function MilitaryPage() {
             інтересів у судах у разі спорів щодо цих питань.
           </li>
         </ul>
+
         <ModalButton className="mx-auto">Contact with me</ModalButton>
+
         <ImgContainer src="/images/main.webp" alt="voenoe pravo" />
+
         <p>
           Військовий адвокат – це надійний правовий партнер для тих, хто
           перебуває на службі, проходить мобілізацію чи потребує захисту прав у
           звязку з військовою діяльністю.
         </p>
+
         <ServicesList
           title="Адвокат з військових питань надає наступні послуги:"
           listData={ServicesData}

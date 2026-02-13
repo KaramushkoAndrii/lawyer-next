@@ -3,15 +3,15 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ServicesData from "@/data/servicesData";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function ViolationPage() {
   return (
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">
-          Адвокат по справах про адміністративне правопорушення
-        </h2>
+        <Heading>Адвокат по справах про адміністративне правопорушення</Heading>
+
         <p>
           Юридична допомога в адміністративних справах користується великим
           попитом, оскільки громадяни щодня мають справу з органами місцевого
@@ -38,9 +38,11 @@ export default function ViolationPage() {
           законодавства, справа може бути передана на розгляд до суду або іншого
           компетентного органу.
         </p>
-        <h3 className="custom-h3">
-          Послуги адвоката в справах про адміністративні правопорушення
-        </h3>
+
+        <Heading level="h3" align="start">
+          ослуги адвоката в справах про адміністративні правопорушення
+        </Heading>
+
         <ImgContainer src="/images/main.webp" alt="musora" />
         <p>
           Адвокат забезпечить Вас надійним захистом у справах про
@@ -66,9 +68,11 @@ export default function ViolationPage() {
           якісної юридичної допомоги і захисту прав та інтересів особи, яка може
           бути притягнута до адміністративної відповідальності.
         </p>
-        <h3 className="custom-h3">
-          Після звернення до адвоката, ви отримаєте:
-        </h3>
+
+        <Heading level="h3" align="start">
+          Після звернення до адвоката, ви отримаєте
+        </Heading>
+
         <ul className="custom-list-disc-inside">
           <li>
             Безкоштовні юридичні консультації з питань, що вас цікавлять, в

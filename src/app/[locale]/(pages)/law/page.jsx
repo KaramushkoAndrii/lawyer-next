@@ -3,15 +3,14 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesData from "@/data/servicesData";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function LawPage() {
   return (
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">
-          Адвокат з адміністративних справ
-        </h2>
+        <Heading>Адвокат з адміністративних справ</Heading>
         <p>
           Кожен може зустрітися з незаконними діями (бездіяльністю) з боку
           державного органу чи органу місцевого самоврядування, внаслідок чого
@@ -41,10 +40,10 @@ export default function LawPage() {
           обирається індивідуально, залежно від особливостей порушення та
           найдієвішого методу його відновлення.
         </p>
-        <h3 className="custom-h3">
+        <Heading level="h3" align="start">
           Юридична допомога адвоката в адміністративних справах полягає в
           наступному:
-        </h3>
+        </Heading>
         <ul className="custom-list-disc-inside">
           <li>
             ретельний юридичний аналіз документів та фактичних обставин справи

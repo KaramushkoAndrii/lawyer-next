@@ -3,15 +3,14 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ServicesData from "@/data/servicesData";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function ProtectionPage() {
   return (
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">
-          Юридичний захист боржників
-        </h2>
+        <Heading>Юридичний захист боржників</Heading>
         <p>
           Все частіше громадяни стикаються не лише з проблемами щодо
           заборгованості за оплату комунальних послуг чи виплати кредитних
@@ -35,9 +34,9 @@ export default function ProtectionPage() {
           listData={ServicesData}
         />
         <ModalButton>Связаться со мной</ModalButton>
-        <h3 className="custom-h3 text-center">
+        <Heading level="h3" align="center">
           Вказаний вище перелік послуг не є вичерпним
-        </h3>
+        </Heading>
       </PageWithAside>
     </>
   );

@@ -3,13 +3,14 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesData from "@/data/servicesData";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function FamilyPage() {
   return (
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">Сімейні справи</h2>
+        <Heading>Сімейні справи</Heading>
         <p>
           Сімейні справи мають унікальну природу, адже вони торкаються майже
           кожної людини. Це питання не тільки юридичного характеру, але й
@@ -18,9 +19,9 @@ export default function FamilyPage() {
           визначення порядку виховання дітей чи стягнення аліментів — завжди
           важливими є цінності, які лежать в основі цих рішень.
         </p>
-        <h3 className="custom-h3">
+        <Heading level="h3" align="start">
           Як адвокат допоможе вам у сімейному праві?
-        </h3>
+        </Heading>
         <p>
           Адвокат у сфері сімейного права — це спеціаліст, який займається
           вирішенням різноманітних сімейних конфліктів: від розгляду сімейних
@@ -31,9 +32,9 @@ export default function FamilyPage() {
           володіти знаннями сімейного кодексу та вміти ефективно використовувати
           норми чинного законодавства на користь свого клієнта.
         </p>
-        <h3 className="custom-h3">
+        <Heading level="h3" align="start">
           Чому важливо звернутися до адвоката з сімейного права?
-        </h3>
+        </Heading>
         <p>
           Сімейні спори є однією з найпоширеніших категорій у цивільному праві.
           Юристи, які спеціалізуються на цій галузі, можуть називати себе

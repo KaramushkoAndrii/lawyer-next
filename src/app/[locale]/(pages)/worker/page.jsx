@@ -3,15 +3,15 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import ServicesData from "@/data/servicesData";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function WorkerPage() {
   return (
     <>
-      <MainSection />
+      <MainSection title="Работа" />
       <PageWithAside>
-        <h2 className="custom-h2 text-center md:text-start">
-          Адвокат з трудових спорів
-        </h2>
+        <Heading>Адвокат з трудових спорів</Heading>
+
         <p>
           Право на працю гарантується Конституцією України та регулюється
           багатьма нормативно-правовими актами. Однак, трудові відносини не
@@ -41,7 +41,11 @@ export default function WorkerPage() {
           комплексне ведення справи (від підготовки позову до виконання рішення
           суду, без залучення Клієнта в юридичні деталі та судову тяганину).
         </p>
-        <h3 className="custom-h3">Крім цього, адвокат:</h3>
+
+        <Heading level="h3" align="start">
+          Крім цього, адвокат:
+        </Heading>
+
         <ul className="custom-list-disc-inside">
           <li>Надасть юридичну консультацію з трудового права;</li>
           <li>Здійснить розробку індивідуальної стратегії вашого захисту;</li>
