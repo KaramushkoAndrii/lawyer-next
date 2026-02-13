@@ -1,21 +1,18 @@
-"use client";
-
-// import { Button } from "@heroui/react";
+import ModalButton from "@/components/UI/modalButton/ModalButton";
 import Link from "next/link";
-import Button from "@/components/UI/button/Button";
-import { useModalStore } from "@/store/useModalStore";
-import { Avatar } from "@heroui/react";
+import Image from "next/image";
 
 const AsideCard = () => {
-  const { openModal } = useModalStore();
-
-  const openHandler = () => {
-    openModal();
-  };
   return (
-    <aside className="hidden bg-secondary/40 rounded-main lg:flex lg:flex-col gap-4 justify-center items-center p-4">
-      {/* <div className="aside-foto"></div> */}
-      <Avatar src="/images/MainFoto.webp" alt="vlad" className="w-20 h-20" />
+    <aside className="hidden bg-secondary/40 rounded-main lg:flex lg:flex-col gap-4 justify-center items-center px-4 py-8 max-h-fit max-w-[25dvw] min-w-[20dvw] sticky top-30">
+      <div className="relative w-20 aspect-square rounded-[50%] overflow-hidden">
+        <Image
+          src="/images/mainFoto.webp"
+          alt="vlad"
+          fill
+          className="object-cover"
+        />
+      </div>
       <h3 className="aside-title">Рясний Владислав Денисович</h3>
       <div className="aside-contacts">
         <ul>
@@ -35,8 +32,10 @@ const AsideCard = () => {
           </li>
         </ul>
       </div>
-      <p className="aside-description">Адвокат, керівник судової практики</p>
-      <Button onPress={openHandler}>Звязатись зараз</Button>
+      <p className="aside-description text-center">
+        Адвокат, керівник судової практики
+      </p>
+      <ModalButton>call me now</ModalButton>
     </aside>
   );
 };

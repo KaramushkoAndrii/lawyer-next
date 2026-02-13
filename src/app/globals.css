@@ -8,10 +8,24 @@
   --heroui-background: 0% 0% 0% / 0%;
 }
 
-* {
-  margin: 0;
-  margin-block: 0;
-  margin-inline: 0;
+@layer base {
+  * {
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heding);
+    font-weight: 700;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
 }
 
 @theme {
@@ -31,6 +45,7 @@
   --text-form: clamp(16px, 1vw, 32px);
   --spacing-slogan: clamp(1rem, 3vw, 5rem);
   --scale-list-item: 1.05;
+  --scale-button: 1.05;
 }
 
 html {
@@ -45,15 +60,39 @@ body {
   min-height: 100vh;
 }
 
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heding);
-    font-weight: 700;
+@layer components {
+  .custom-h1 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .custom-h2 {
+    font-size: clamp(1rem, 6vw, 1.5rem);
+    letter-spacing: 0.25rem;
+  }
+
+  .custom-h3 {
+    font-size: clamp(0.75rem, 5vw, 1rem);
+    letter-spacing: 0.12rem;
+    margin: 0.75rem 0;
+  }
+
+  .custom-list-disc-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: disc;
+    list-style-position: inside;
+  }
+
+  .custom-list-disc-inside > li {
+    transition: color;
+    transition-duration: 300ms;
+  }
+
+  .custom-list-disc-inside > li:hover {
+    color: var(--color-primary);
   }
 }
 

@@ -18,7 +18,7 @@ const play = Play({
 
 const roboto = Roboto({
   variable: "--font-roboto",
-  subsets: ["cirillic"],
+  subsets: ["cyrillic"],
   weight: ["300", "400", "500", "700"],
   display: "swap",
 });

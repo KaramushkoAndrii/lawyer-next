@@ -1,30 +1,31 @@
-import ServicesClient from "./ServicesClient";
-
 import ServicesList from "./ServicesList";
+import ModalButton from "@/components/UI/modalButton/ModalButton";
 
 const ServicesSection = () => {
   const d = [
-    { href: "/", title: "Заголовок 1" },
-    { href: "/", title: "Заголовок 2" },
-    { href: "/", title: "Заголовок 3" },
-    { href: "/", title: "Заголовок 4" },
-    { href: "/", title: "Заголовок 5" },
-    { href: "/", title: "Заголовок 6" },
-    { href: "/", title: "Заголовок 7" },
+    { href: "/build", title: "Нерухомість та будівництво" },
+    { href: "/family", title: "Сімейні справи" },
+    { href: "/military", title: "Військове право" },
+    { href: "/lawyer", title: "Послуги адвоката" },
+    { href: "/duty", title: "Повернення боргів" },
+    { href: "/protection", title: "Юридичний захист боржників" },
+    { href: "/worker", title: "Трудове право" },
+    { href: "/law", title: "Адміністративне право" },
+    { href: "/violation", title: "Справи про адміністративне правопорушення" },
   ];
 
-  const servicesText = (
-    <p className="services__text">
-      Не знайшли те, що шукали? Всі проблеми в кількох пунктах не описати,
-      натисніть нижче та уточнюйте інформацію виключно з Вашого питання.
-    </p>
-  );
-
   return (
-    <ServicesClient description={servicesText}>
+    <section className="services container m-auto pb-16 pt-16">
       <h2 className="text-2xl"> Основні сервіси</h2>
       <ServicesList data={d} />
-    </ServicesClient>
+      <div className="services__request flex flex-col text-center gap-4 items-center justify-center lg:flex-row lg:text-start">
+        <p className="services__text">
+          Не знайшли те, що шукали? Всі проблеми в кількох пунктах не описати,
+          натисніть нижче та уточнюйте інформацію виключно з Вашого питання.
+        </p>
+        <ModalButton className={`lg:max-w-full`}>Text for button</ModalButton>
+      </div>
+    </section>
   );
 };
 

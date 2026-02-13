@@ -35,7 +35,7 @@ const LangSwitcher = () => {
   };
 
   return (
-    <Dropdown className="w-20 min-w-12.5">
+    <Dropdown className="w-20 min-w-12.5" shouldBlockScroll={false}>
       <DropdownTrigger>
         <Button
           variant="solid"

@@ -2,17 +2,12 @@
 
 import { useState } from "react";
 import Button from "@/components/UI/button/Button";
-import { useModalStore } from "@/store/useModalStore";
+import ModalButton from "@/components/UI/modalButton/ModalButton";
 import WelcomeImg from "./WelcomeImg";
 import WelcomeVideo from "./WelcomeVideo";
 
 const WelcomeClient = ({ children, btnText }) => {
-  const { openModal } = useModalStore();
   const [viewVideo, setViewVideo] = useState(false);
-
-  const openHandler = () => {
-    openModal();
-  };
 
   const handleMediaChanger = () => {
     setViewVideo((state) => !state);
@@ -29,9 +24,7 @@ const WelcomeClient = ({ children, btnText }) => {
       <div className="welcome__info flex flex-col gap-8 pb-6 lg:gap-12 xl:gap-4">
         {children}
         <div className="welcome__button-group w-full flex flex-col gap-4 items-center lg:items-start">
-          <Button className={`lg:max-w-full`} onPress={openHandler}>
-            {btnText}
-          </Button>
+          <ModalButton className={`mx-0 lg:max-w-full`}>{btnText}</ModalButton>
           <Button className={`lg:max-w-full`} onPress={handleMediaChanger}>
             {viewVideo ? "Назад" : "Дивитися відео"}
           </Button>

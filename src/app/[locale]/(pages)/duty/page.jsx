@@ -1,0 +1,59 @@
+import MainSection from "@/components/UI/mainSection/MainSection";
+import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
+import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
+import ModalButton from "@/components/UI/modalButton/ModalButton";
+import Heading from "@/components/UI/heading/Heading";
+import { Link } from "@/i18n/routing";
+
+export default function DutyPage() {
+  return (
+    <>
+      <MainSection />
+      <PageWithAside>
+        <Heading>Стягнення боргу за борговою розпискою</Heading>
+        <p>
+          Останнім часом склалась така соціально-економічна ситуація, при якій
+          велика кількість громадян отримують грошові кошти в борг та їх не
+          повертають. Щоб отримати необхідну суму грошей, люди можуть укласти
+          кредитний договір з банком, підписати договір позики або отримати
+          гроші під розписку.
+        </p>
+        <Heading level="h3" align="start">
+          Чому варто звернутися за допомогою до адвоката, в справі про
+          повернення боргу?
+        </Heading>
+        <p>
+          В разі якщо ви позичили гроші у борг, а боржник їх не повертає, вам
+          необхідно звернутись до адвоката, який спеціалізується на стягненні
+          проблемної заборгованості. Адвокат здійснить супровід клієнта на всіх
+          етапах досудових та судових розглядів. В разі необхідності, адвокат
+          додатково ініціює відкриття кримінальної справи за ст. 190 КК України
+          (шахрайство), щодо боржника, з метою повернення коштів.
+        </p>
+        <ImgContainer src="/images/main.webp" alt="duty" />
+        <Heading level="h3" align="start">
+          Як адвокат допоможе із поверненням боргу?
+        </Heading>
+        <p>
+          Для того щоб повернути ваш борг, за борговою розпискою, адвокат
+          здійснить ретельний юридичний аналіз документів, зокрема боргову
+          розписку або інший документ на підставі якого виник борг та оцінить
+          фактичні обставини справи. Крім цього, адвокат проаналізує майнове і
+          фінансове становище боржника, та докладе максимум зусиль для того, щоб
+          вам повернули ваші гроші.
+        </p>
+        <ModalButton className="mx-auto">sVYAZ</ModalButton>
+        <p>
+          Для більш детального ознайомлення із самою процедурою повернення боргу
+          просимо вас переглянути статтю:
+          <Link
+            href="/family"
+            className="text-primary underline decoration-solid"
+          >
+            Повернення боргу
+          </Link>
+        </p>
+      </PageWithAside>
+    </>
+  );
+}
