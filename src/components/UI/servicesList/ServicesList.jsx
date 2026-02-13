@@ -9,7 +9,7 @@ const ServicesList = ({ title, listData, footer }) => {
           <ServicesListItem key={item.id} src={item.src} text={item.text} />
         ))}
       </ul>
-      <h3>{footer}</h3>
+      <h3 className="custom-h3 text-center">{footer}</h3>
     </>
   );
 };
