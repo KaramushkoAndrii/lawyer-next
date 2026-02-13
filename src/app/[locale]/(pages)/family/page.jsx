@@ -9,7 +9,7 @@ export default function FamilyPage() {
     <>
       <MainSection />
       <PageWithAside>
-        <h2 className="custom-h2">Сімейні справи</h2>
+        <h2 className="custom-h2 text-center md:text-start">Сімейні справи</h2>
         <p>
           Сімейні справи мають унікальну природу, адже вони торкаються майже
           кожної людини. Це питання не тільки юридичного характеру, але й

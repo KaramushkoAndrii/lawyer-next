@@ -9,7 +9,9 @@ export default function ProtectionPage() {
     <>
       <MainSection />
       <PageWithAside>
-        <h2>Юридичний захист боржників</h2>
+        <h2 className="custom-h2 text-center md:text-start">
+          Юридичний захист боржників
+        </h2>
         <p>
           Все частіше громадяни стикаються не лише з проблемами щодо
           заборгованості за оплату комунальних послуг чи виплати кредитних
@@ -33,7 +35,9 @@ export default function ProtectionPage() {
           listData={ServicesData}
         />
         <ModalButton>Связаться со мной</ModalButton>
-        <p>Вказаний вище перелік послуг не є вичерпним</p>
+        <h3 className="custom-h3 text-center">
+          Вказаний вище перелік послуг не є вичерпним
+        </h3>
       </PageWithAside>
     </>
   );

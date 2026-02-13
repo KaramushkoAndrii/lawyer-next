@@ -16,7 +16,7 @@ export default function BuildPage() {
       <MainSection />
       <PageWithAside>
         <>
-          <h2 className="custom-h2">
+          <h2 className="custom-h2 text-center md:text:start">
             Адвокат з нерухомості та житлових спорів
           </h2>
           <p>
