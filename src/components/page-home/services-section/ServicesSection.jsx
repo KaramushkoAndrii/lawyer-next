@@ -1,5 +1,6 @@
 import ServicesList from "./ServicesList";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
+import Heading from "@/components/UI/heading/Heading";
 
 const ServicesSection = () => {
   const d = [
@@ -15,8 +16,8 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="services container m-auto pb-16 pt-16">
-      <h2 className="text-2xl"> Основні сервіси</h2>
+    <section id="services" className="services container m-auto pt-16">
+      <Heading align="start">Основні сервіси</Heading>
       <ServicesList data={d} />
       <div className="services__request flex flex-col text-center gap-4 items-center justify-center lg:flex-row lg:text-start">
         <p className="services__text">

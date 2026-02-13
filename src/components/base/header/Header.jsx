@@ -22,6 +22,10 @@ const Header = () => {
   const t = useTranslations("Navigation");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const closeHandler = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <Navbar
@@ -61,7 +65,12 @@ const Header = () => {
         <NavbarMenu className="bg-primary/30 backdrop-blur-md text-white items-center justify-center gap-10">
           {NavigationList.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link className="w-full" href={item.url} size="lg">
+              <Link
+                className="w-full"
+                href={item.url}
+                size="lg"
+                onClick={closeHandler}
+              >
                 {t(item.name)}
               </Link>
             </NavbarMenuItem>

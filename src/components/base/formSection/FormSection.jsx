@@ -17,7 +17,10 @@ const FormSection = () => {
 
   const onSubmit = (data) => console.log(data);
   return (
-    <section className="form-section relative text-main-white pt-16 pr-8 pb-16 pl-8">
+    <section
+      id="connect"
+      className="form-section relative text-main-white pt-16 pr-8 pb-16 pl-8"
+    >
       <Image
         fill
         src="/images/main.webp"
