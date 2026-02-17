@@ -1,67 +1,72 @@
-export const casesAdminData = [
+export const casesData = [
   {
-    title:
-      "Закрили провадження за ст. 130 КУпАП у зв`язку з відсутністю складу  правопорушення",
-    id: 1,
-    url: "/",
-    background: "/images/main.webp",
+    header: "Административные дела",
+    cases: [
+      {
+        id: 1,
+        title: "Закрили провадження",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 2,
+        title: "Закрили провадження 2",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 3,
+        title: "Закрили провадження 3",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 4,
+        title: "Закрили провадження 4",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 5,
+        title: "Закрили провадження 5",
+        url: "/",
+        background: "/images/main.webp",
+      },
+    ],
   },
   {
-    title: "Заголовок 2",
-    id: 2,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title:
-      "Закрили провадження за ст. 130 КУпАП у зв`язку з відсутністю складу  правопорушення",
-    id: 3,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title: "Заголовок 4",
-    id: 4,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title:
-      "Закрили провадження за ст. 130 КУпАП у зв`язку з відсутністю складу  правопорушення",
-    id: 5,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title: "Заголовок 5",
-    id: 10,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title:
-      "Закрили провадження за ст. 130 КУпАП у зв`язку з відсутністю складу  правопорушення",
-    id: 6,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title: "Заголовок 5",
-    id: 7,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title:
-      "Закрили провадження за ст. 130 КУпАП у зв`язку з відсутністю складу  правопорушення",
-    id: 8,
-    url: "/",
-    background: "/images/main.webp",
-  },
-  {
-    title: "Заголовок 5",
-    id: 9,
-    url: "/",
-    background: "/images/main.webp",
+    header: "Сімейні справи",
+    cases: [
+      {
+        id: 1,
+        title: "Закрили провадження",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 2,
+        title: "Закрили провадження 2",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 3,
+        title: "Закрили провадження 3",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 4,
+        title: "Закрили провадження 4",
+        url: "/",
+        background: "/images/main.webp",
+      },
+      {
+        id: 5,
+        title: "Закрили провадження 5",
+        url: "/",
+        background: "/images/main.webp",
+      },
+    ],
   },
 ];

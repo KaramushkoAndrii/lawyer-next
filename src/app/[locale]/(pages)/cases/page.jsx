@@ -2,7 +2,7 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import Heading from "@/components/UI/heading/Heading";
 import CasesList from "@/components/page-cases/CasesList";
-import { casesAdminData } from "@/data/casesData";
+import { casesData } from "@/data/casesData";
 
 export default function CasesPage() {
   return (
@@ -19,7 +19,7 @@ export default function CasesPage() {
           стратегічного мислення та уваги до деталей, що дозволяють досягати
           найкращих результатів для кожного клієнта.
         </p>
-        <CasesList list={casesAdminData} />
+        <CasesList list={casesData} />
       </PageWithAside>
     </>
   );

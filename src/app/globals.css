@@ -42,7 +42,7 @@
     var(--tw-shadow-color, var(--color-primary));
   --text-slogan: clamp(1rem, 3vw, 5rem);
   --text-span: clamp(0.75rem, 2vw, 1rem);
-  --text-recomend: clamp(0.5rem, 2vw, 0.65rem);
+  --text-recomend: clamp(0.5rem, 2vw, 0.75rem);
   --text-services: clamp(12px, 2.5vw, 16px);
   --text-form: clamp(16px, 1vw, 32px);
   --spacing-slogan: clamp(1rem, 3vw, 5rem);
