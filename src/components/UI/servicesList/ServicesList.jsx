@@ -9,7 +9,7 @@ const ServicesList = ({ title, listData, footer, keyGroup = null }) => {
         {listData.map((item) => (
           <ServicesListItem
             key={item.id}
-            src={item.src}
+            slugData={item.slug}
             text={item.text}
             keyGroup={keyGroup}
           />
