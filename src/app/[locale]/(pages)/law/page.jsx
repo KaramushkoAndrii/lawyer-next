@@ -4,6 +4,7 @@ import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 // import ServicesData from "@/data/servicesData";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import Heading from "@/components/UI/heading/Heading";
+import { LawServicesData } from "@/data/servicesData";
 
 export default function LawPage() {
   return (
@@ -29,10 +30,12 @@ export default function LawPage() {
           адміністративні суди.
         </p>
         <ImgContainer src="/images/main.webp" alt="law" />
-        {/* <ServicesList
+        <ServicesList
           title="Адвокат надає правову допомогу у наступних справах:"
-          listData={ServicesData}
-        /> */}
+          listData={LawServicesData}
+          routePath="/law"
+          keyGroup="LawList"
+        />
         <p>
           Зазначений перелік послуг адвоката не є вичерпним. Захист може
           здійснюватися й іншими методами, які не суперечать чинному

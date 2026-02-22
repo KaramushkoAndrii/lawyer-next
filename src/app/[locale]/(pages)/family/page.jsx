@@ -4,6 +4,7 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
 import Heading from "@/components/UI/heading/Heading";
+import { FamilyServicesData } from "@/data/servicesData";
 
 export default function FamilyPage() {
   return (
@@ -50,7 +51,12 @@ export default function FamilyPage() {
           письмовій формі, як дистанційно так і під час особистої зустрічі.
           Послуги адвоката доступні для мешканців будь-якого регіону України.
         </p>
-        {/* <ServicesList listData={ServicesData} /> */}
+        <ServicesList
+          listData={FamilyServicesData}
+          title={"Сімейні справи"}
+          keyGroup={"FamilyList"}
+          routePath="/family"
+        />
       </PageWithAside>
     </>
   );

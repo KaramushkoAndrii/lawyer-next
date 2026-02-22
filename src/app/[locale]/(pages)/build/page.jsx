@@ -107,6 +107,7 @@ export default async function BuildPage() {
             title={"Послуги адвоката"}
             footer={"Gjckeub fldjrfnf 2"}
             keyGroup={"BuildList"}
+            routePath="/build"
           />
         </>
       </PageWithAside>

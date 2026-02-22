@@ -4,6 +4,7 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import Heading from "@/components/UI/heading/Heading";
+import { WorkerServicesData } from "@/data/servicesData";
 
 export default function WorkerPage() {
   return (
@@ -63,11 +64,13 @@ export default function WorkerPage() {
             та касаційній інстанціях;
           </li>
         </ul>
-        {/* <ServicesList
-          listData={ServicesData}
+        <ServicesList
+          listData={WorkerServicesData}
           title="Послуги"
           footer="Вказаний вище перелік послуг не є вичерпним"
-        /> */}
+          keyGroup={"WorkerList"}
+          routePath="/worker"
+        />
       </PageWithAside>
     </>
   );

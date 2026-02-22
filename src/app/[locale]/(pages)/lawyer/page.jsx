@@ -4,6 +4,7 @@ import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 // import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
+import { FamilyServicesData } from "@/data/servicesData";
 
 export default function Lawyer() {
   return (
@@ -57,10 +58,12 @@ export default function Lawyer() {
         </p>
         <Heading>Адвокат надає наступні послуги</Heading>
         <ImgContainer src="/images/main.webp" alt="services" />
-        {/* <ServicesList
+        <ServicesList
           title="Категорія сімейних справ:"
-          listData={ServicesData}
-        /> */}
+          listData={FamilyServicesData}
+          keyGroup="FamilyList"
+          routePath="/family"
+        />
         <ImgContainer src="/images/main.webp" alt="services" />
         {/* <ServicesList
           title="Категорія справ які пов`язані із борговими зобов'язаннями:"
