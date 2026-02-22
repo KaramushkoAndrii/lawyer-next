@@ -3,7 +3,7 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
 
 export default function MilitaryPage() {
@@ -76,11 +76,11 @@ export default function MilitaryPage() {
           звязку з військовою діяльністю.
         </p>
 
-        <ServicesList
+        {/* <ServicesList
           title="Адвокат з військових питань надає наступні послуги:"
           listData={ServicesData}
           footer="Вказаний вище перелік послуг не є вичерпним"
-        />
+        /> */}
       </PageWithAside>
     </>
   );

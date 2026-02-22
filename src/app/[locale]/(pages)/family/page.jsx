@@ -1,6 +1,6 @@
 import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
 import Heading from "@/components/UI/heading/Heading";
@@ -50,7 +50,7 @@ export default function FamilyPage() {
           письмовій формі, як дистанційно так і під час особистої зустрічі.
           Послуги адвоката доступні для мешканців будь-якого регіону України.
         </p>
-        <ServicesList listData={ServicesData} />
+        {/* <ServicesList listData={ServicesData} /> */}
       </PageWithAside>
     </>
   );

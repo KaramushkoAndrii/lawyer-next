@@ -2,7 +2,7 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
 
 export default function Lawyer() {
@@ -57,21 +57,21 @@ export default function Lawyer() {
         </p>
         <Heading>Адвокат надає наступні послуги</Heading>
         <ImgContainer src="/images/main.webp" alt="services" />
-        <ServicesList
+        {/* <ServicesList
           title="Категорія сімейних справ:"
           listData={ServicesData}
-        />
+        /> */}
         <ImgContainer src="/images/main.webp" alt="services" />
-        <ServicesList
+        {/* <ServicesList
           title="Категорія справ які пов`язані із борговими зобов'язаннями:"
           listData={ServicesData}
-        />
+        /> */}
         <ImgContainer src="/images/main.webp" alt="services" />
-        <ServicesList
+        {/* <ServicesList
           title="Категорія адміністративних справ:"
           listData={ServicesData}
           footer="Вказаний вище перелік послуг не є вичерпним"
-        />
+        /> */}
       </PageWithAside>
     </>
   );

@@ -2,7 +2,7 @@ import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
 import { getLocale } from "next-intl/server";
 import { BuildServicesData } from "@/data/servicesData";

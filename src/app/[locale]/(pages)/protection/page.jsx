@@ -1,7 +1,7 @@
 import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
 import Heading from "@/components/UI/heading/Heading";
 
@@ -29,10 +29,10 @@ export default function ProtectionPage() {
           позовом про їх захист, а також скористатися послугами адвоката або
           юриста для отримання правової підтримки.
         </p>
-        <ServicesList
+        {/* <ServicesList
           title="Адвокат може надати боржнику такі види юридичної допомоги:"
           listData={ServicesData}
-        />
+        /> */}
         <ModalButton>Связаться со мной</ModalButton>
         <Heading level="h3" align="center">
           Вказаний вище перелік послуг не є вичерпним
