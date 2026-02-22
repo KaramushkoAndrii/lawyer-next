@@ -5,7 +5,7 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
 import { getLocale } from "next-intl/server";
-import Head from "next/head";
+import { BuildServicesData } from "@/data/servicesData";
 
 // 1. Метаданные экспортируем как именованную константу (НЕ default)
 export const metadata = {
@@ -102,11 +102,12 @@ export default async function BuildPage() {
 
           <Heading>Текущая локаль:{locale}</Heading>
 
-          {/* <ServicesList
-            listData={ServicesData}
+          <ServicesList
+            listData={BuildServicesData}
             title={"Послуги адвоката"}
             footer={"Gjckeub fldjrfnf 2"}
-          /> */}
+            keyGroup={"BuildList"}
+          />
         </>
       </PageWithAside>
     </>

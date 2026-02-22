@@ -31,31 +31,39 @@
 
 export const BuildServicesData = [
   {
-    title: "maino",
+    text: "maino",
     slug: {
       ru: "nedvizhimost",
       uk: "maino",
     },
+    id: 1,
+    src: "/",
   },
   {
-    title: "arenda",
+    text: "arenda",
     slug: {
       ru: "arenda",
       uk: "orenda",
     },
+    id: 2,
+    src: "/",
   },
   {
-    title: "spory",
+    text: "spory",
     slug: {
       ru: "spory",
       uk: "spory-uk",
     },
+    id: 3,
+    src: "/",
   },
   {
-    title: "sporavy",
+    text: "spravy",
     slug: {
       ru: "dela",
       uk: "spravy",
     },
+    id: 4,
+    src: "/",
   },
 ];
