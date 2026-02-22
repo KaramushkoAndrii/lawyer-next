@@ -8,5 +8,11 @@
   },
   "HomePage": {
     "title": "Привіт"
+  },
+  "BuildList": {
+    "maino": "Майно",
+    "arenda": "Оренда",
+    "spory": "Спори",
+    "spravy": "Справи"
   }
 }
