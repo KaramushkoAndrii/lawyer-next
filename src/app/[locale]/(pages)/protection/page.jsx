@@ -1,9 +1,10 @@
 import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
 import Heading from "@/components/UI/heading/Heading";
+import { ProtectionServicesData } from "@/data/servicesData";
 
 export default function ProtectionPage() {
   return (
@@ -31,7 +32,9 @@ export default function ProtectionPage() {
         </p>
         <ServicesList
           title="Адвокат може надати боржнику такі види юридичної допомоги:"
-          listData={ServicesData}
+          listData={ProtectionServicesData}
+          keyGroup="ProtectionList"
+          routePath="/protection"
         />
         <ModalButton>Связаться со мной</ModalButton>
         <Heading level="h3" align="center">

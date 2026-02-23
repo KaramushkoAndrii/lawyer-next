@@ -2,8 +2,9 @@ import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
+import { ViolationServicesData } from "@/data/servicesData";
 
 export default function ViolationPage() {
   return (
@@ -95,8 +96,10 @@ export default function ViolationPage() {
           <li>Надання допомоги в досудовій процедурі врегулювання спору;</li>
         </ul>
         <ServicesList
-          listData={ServicesData}
+          listData={ViolationServicesData}
           title="Адвокат по справах про адміністративні правопорушення надає наступні послуги:"
+          keyGroup="ViolationList"
+          routePath="/violation"
         />
       </PageWithAside>
     </>

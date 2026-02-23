@@ -3,8 +3,9 @@ import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
 import ModalButton from "@/components/UI/modalButton/ModalButton";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
-import ServicesData from "@/data/servicesData";
+// import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
+import { MilitaryServicesData } from "@/data/servicesData";
 
 export default function MilitaryPage() {
   return (
@@ -78,8 +79,10 @@ export default function MilitaryPage() {
 
         <ServicesList
           title="Адвокат з військових питань надає наступні послуги:"
-          listData={ServicesData}
+          listData={MilitaryServicesData}
           footer="Вказаний вище перелік послуг не є вичерпним"
+          keyGroup={"MilitaryList"}
+          routePath="/military"
         />
       </PageWithAside>
     </>

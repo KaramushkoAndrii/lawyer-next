@@ -5,6 +5,8 @@ import { useParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { usePathname, useRouter } from "@/i18n/routing";
+// import { BuildServicesData } from "@/data/servicesData";
+import { AllServicesData } from "@/data/servicesData";
 import {
   Dropdown,
   DropdownItem,
@@ -25,11 +27,34 @@ const LangSwitcher = () => {
 
     if (!newLocale) return;
 
+    let newParams = { ...params };
+
+    if (params.slug) {
+      const categoryKey = pathname.split("/")[1];
+
+      const categoryData = AllServicesData[categoryKey];
+
+      // if (currentService) {
+      //   // Подменяем слаг на версию для нового языка
+      //   newParams.slug = currentService.slug[newLocale];
+      // }
+
+      if (categoryData) {
+        const currentService = categoryData.find(
+          (item) => item.slug[locale] === params.slug,
+        );
+
+        if (currentService) {
+          newParams.slug = currentService.slug[newLocale];
+        }
+      }
+    }
+
     router.push(
       // @ts-expect-error -- TypeScript will validate that only known `params`
       // are used in combination with a given `pathname`. Since the two will
       // always match for the current route, we can skip runtime checks.
-      { pathname, params },
+      { pathname, params: newParams },
       { locale: newLocale },
     );
   };
