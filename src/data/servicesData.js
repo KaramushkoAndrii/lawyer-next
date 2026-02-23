@@ -35,10 +35,34 @@
 
 // Данные для строительства (уже есть)
 export const BuildServicesData = [
-  { text: "maino", slug: { ru: "nedvizhimost", uk: "maino" }, id: 1 },
-  { text: "arenda", slug: { ru: "arenda", uk: "orenda" }, id: 2 },
-  { text: "spory", slug: { ru: "spory", uk: "spory-uk" }, id: 3 },
-  { text: "spravy", slug: { ru: "dela", uk: "spravy" }, id: 4 },
+  {
+    text: "maino",
+    slug: { ru: "nedvizhimost", uk: "maino" },
+    id: 1,
+    title: "Hello world",
+    description: "This description about maino",
+  },
+  {
+    text: "arenda",
+    slug: { ru: "arenda", uk: "orenda" },
+    id: 2,
+    title: "This page about arenda",
+    description: "description about arenda",
+  },
+  {
+    text: "spory",
+    slug: { ru: "spory", uk: "spory-uk" },
+    id: 3,
+    title: "This page about spors",
+    description: "description about spors",
+  },
+  {
+    text: "spravy",
+    slug: { ru: "dela", uk: "spravy" },
+    id: 4,
+    title: "This page about spravy",
+    description: "This description about spravy",
+  },
 ];
 
 // Семейные дела
