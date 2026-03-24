@@ -1,39 +1,4 @@
-// export const BuildServicesData = [
-//   {
-//     text: "maino",
-//     slug: {
-//       ru: "nedvizhimost",
-//       uk: "maino",
-//     },
-//     id: 1,
-//   },
-//   {
-//     text: "arenda",
-//     slug: {
-//       ru: "arenda",
-//       uk: "orenda",
-//     },
-//     id: 2,
-//   },
-//   {
-//     text: "spory",
-//     slug: {
-//       ru: "spory",
-//       uk: "spory-uk",
-//     },
-//     id: 3,
-//   },
-//   {
-//     text: "spravy",
-//     slug: {
-//       ru: "dela",
-//       uk: "spravy",
-//     },
-//     id: 4,
-//   },
-// ];
-
-// Данные для строительства (уже есть)
+// Строительство
 export const BuildServicesData = [
   {
     text: "maino",
@@ -68,7 +33,11 @@ export const BuildServicesData = [
 // Семейные дела
 export const FamilyServicesData = [
   { text: "divorce", slug: { ru: "razvod", uk: "rozluchennya" }, id: 1 },
-  { text: "alimony", slug: { ru: "alimenty", uk: "alimony-uk" }, id: 2 },
+  {
+    text: "alimony",
+    slug: { ru: "vytrebovanie-alimentov", uk: "stygneny-alimentiv" },
+    id: 2,
+  },
 ];
 
 // Военное право
