@@ -34,11 +34,12 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages();
   return (
     <html lang={locale} className={`${play.variable} ${roboto.variable}`}>
-      <body className={` antialiased`}>
+      <body className={` antialiased flex flex-col`}>
         <NextIntlClientProvider messages={messages}>
           <Providers>
             <Header />
-            {children}
+            <main>{children}</main>
+
             <FormSection />
             <Footer />
           </Providers>
