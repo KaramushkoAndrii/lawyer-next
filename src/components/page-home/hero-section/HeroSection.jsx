@@ -3,11 +3,15 @@ import HeroButtonsGroup from "./HeroButtonsGroup";
 import Heading from "@/components/UI/heading/Heading";
 
 const HeroSection = ({ data }) => {
+  if (!data) return null;
+
+  const { title, description, alt, cover } = data;
+
   return (
     <section className={`hero-section relative min-w-screen min-h-screen`}>
       <Image
-        src={"/images/main.webp"}
-        alt="background"
+        src={cover.url}
+        alt={alt || "main-foto-lawyer-ryasnyi"}
         fill
         priority
         className="object-cover -z-10"
@@ -17,12 +21,11 @@ const HeroSection = ({ data }) => {
       <div className="hero-section__content ml-6 mr-6 flex flex-col justify-evenly items-center h-dvh text-center text-white">
         <div className="hero-section__content--content flex flex-col gap-8 mb-10 px-8">
           <Heading level="h1" align="center" className="text-4xl">
-            Владислав Рясний
+            {title}
           </Heading>
 
           <Heading level="h2" align="center">
-            адвокат у сфері цивільного, військового, кримінального,
-            адміністративного та сімейного права
+            {description}
           </Heading>
         </div>
         <HeroButtonsGroup

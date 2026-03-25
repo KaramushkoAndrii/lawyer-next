@@ -6,8 +6,10 @@ import ModalButton from "@/components/UI/modalButton/ModalButton";
 import WelcomeImg from "./WelcomeImg";
 import WelcomeVideo from "./WelcomeVideo";
 
-const WelcomeClient = ({ children, btnText }) => {
+const WelcomeClient = ({ children, btnText, data }) => {
   const [viewVideo, setViewVideo] = useState(false);
+
+  if (!data) return "";
 
   const handleMediaChanger = () => {
     setViewVideo((state) => !state);
@@ -16,7 +18,7 @@ const WelcomeClient = ({ children, btnText }) => {
   const media = viewVideo ? (
     <WelcomeVideo params="controls=1" />
   ) : (
-    <WelcomeImg />
+    <WelcomeImg mediaData={data} />
   );
 
   return (

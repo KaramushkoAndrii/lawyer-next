@@ -1,20 +1,22 @@
 import Image from "next/image";
 
-const WelcomeImg = () => {
+const WelcomeImg = ({ mediaData }) => {
+  const { sloganHeader, sloganFooter, image } = mediaData;
+
   return (
     <div className="welcome__img relative w-full aspect-video rounded-main lg:h-full lg:aspect-square xl:aspect-video">
       <Image
         alt="description"
         fill
-        src={"/images/MainFoto.webp"}
+        src={image.url}
         className="object-cover rounded-main"
         sizes="(max-width: 1024px) 100vw, 50vw"
       />
       <div className="absolute -bottom-15 bg-broun rounded-main w-full lg:w-max lg:-bottom-22 lg:-left-12">
         <p className="flex flex-col text-center text-main-white p-slogan items-center gap-2 lg:gap-4">
-          Amat Victoria Curam
+          {sloganHeader}
           <span className="relative text-span before:absolute before:content-[''] before:h-px before:bg-main-white before:w-full before:-top-1 lg:before:-top-2">
-            Перемога любить підготовку
+            {sloganFooter}
           </span>
         </p>
       </div>

@@ -12,16 +12,21 @@ export const metadata = {
 
 export default async function Home({ params }) {
   const { locale } = await params;
-  // const first = await getData("/hero-section", {
-  //   populate: "cover",
-  // });
+
+  const heroSectionData = await getData("/hero-section", {
+    populate: "cover",
+  });
+
+  const welcomeSectionData = await getData("/welcome-section", {
+    populate: ["description", "image"],
+  });
 
   const t = await getTranslations("HomePage");
   return (
     <>
-      <HeroSection />
+      <HeroSection data={heroSectionData.data} />
       <Container>
-        <WelcomeSection />
+        <WelcomeSection data={welcomeSectionData.data} />
         <ServicesSection />
       </Container>
     </>
