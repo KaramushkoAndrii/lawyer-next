@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary">
       <nav>
-        <ul className="p-4 grid grid-cols-3">
+        <ul className="p-4 grid grid-cols-3 text-main-white">
           {NavigationList.map((item, index) => (
             <li key={index}>
               <Link href={item.url}>{t(`${item.name}`)}</Link>

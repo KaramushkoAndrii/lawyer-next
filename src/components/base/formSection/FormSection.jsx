@@ -4,6 +4,7 @@ import { Form, Input } from "@heroui/react";
 import Button from "@/components/UI/button/Button";
 import Image from "next/image";
 import advatageList from "@/data/advantageList";
+import useValidationRules from "@/lib/useValidationRules";
 import { useForm } from "react-hook-form";
 
 const FormSection = () => {
@@ -14,6 +15,10 @@ const FormSection = () => {
   } = useForm({
     mode: "onChange",
   });
+
+  const rules = useValidationRules();
+
+  const { phone } = rules;
 
   const onSubmit = (data) => console.log(data);
   return (
@@ -35,27 +40,26 @@ const FormSection = () => {
           <p>Залиште заявку на юридичну допомогу прямо зараз</p>
         </div>
         <Form
-          className="gap-4 lg:flex-row lg:justify-center lg:items-center"
+          className="gap-4  lg:justify-center lg:items-center"
           onSubmit={handleSubmit(onSubmit)}
         >
-          <Input
-            type="tel"
-            name="number"
-            label="here is your phone"
-            className="lg:max-w-[30dvw]"
-            classNames={{ input: "text-form" }}
-            {...register("tel", {
-              pattern: {
-                value: /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/,
-                message: "Номер не коректный",
-              },
-            })}
-            isInvalid={!!errors.tel}
-            errorMessage={errors.tel?.message}
-          />
-          <Button type="submit" className="w-full">
-            Submit
-          </Button>
+          <div className="flex fleex-col justify-center items-center lg:flex-row w-full gap-8">
+            <Input
+              type="tel"
+              // name="number"
+              label="here is your phone"
+              className="lg:max-w-[30dvw]"
+              classNames={{ input: "text-form" }}
+              {...register("tel", phone)}
+              isInvalid={!!errors.tel}
+            />
+            <Button type="submit" className="w-full">
+              Submit
+            </Button>
+          </div>
+          {errors.tel && (
+            <p className="text-red-500 text-span mt-1">{phone.message}</p>
+          )}
         </Form>
         <ul className="advantage-list flex flex-col gap-4 justify-center lg:flex-row lg:gap-12 xl:gap24">
           {advatageList.map((item, index) => (
