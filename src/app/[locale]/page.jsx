@@ -21,13 +21,15 @@ export default async function Home({ params }) {
     populate: ["description", "image"],
   });
 
+  const servicesSectionData = await getData("/service-section");
+
   const t = await getTranslations("HomePage");
   return (
     <>
       <HeroSection data={heroSectionData.data} />
       <Container>
         <WelcomeSection data={welcomeSectionData.data} />
-        <ServicesSection />
+        <ServicesSection data={servicesSectionData.data} />
       </Container>
     </>
   );
