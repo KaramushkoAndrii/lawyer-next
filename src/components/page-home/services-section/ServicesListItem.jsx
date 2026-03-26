@@ -1,10 +1,11 @@
-// import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { FaRegBuilding } from "react-icons/fa";
 import Heading from "@/components/UI/heading/Heading";
 
 const ServicesListItem = ({ data }) => {
   const { href, title } = data;
+  const t = useTranslations("ServicesList");
   return (
     <li className="p-4 border border-solid border-primary rounded-main shadow-main w-full max-w-70 transition-all duration-300 ease-in-out hover:scale-list-item hover:shadow-main-large">
       <Link
@@ -14,7 +15,7 @@ const ServicesListItem = ({ data }) => {
         <i>
           <FaRegBuilding size={22} />
         </i>
-        <h3 className="text-services">{title}</h3>
+        <Heading level="h3">{t(`${title}`)}</Heading>
       </Link>
     </li>
   );

@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
 import { usePathname, useRouter } from "@/i18n/routing";
-// import { BuildServicesData } from "@/data/servicesData";
 import { AllServicesData } from "@/data/servicesData";
 import {
   Dropdown,
@@ -33,11 +32,6 @@ const LangSwitcher = () => {
       const categoryKey = pathname.split("/")[1];
 
       const categoryData = AllServicesData[categoryKey];
-
-      // if (currentService) {
-      //   // Подменяем слаг на версию для нового языка
-      //   newParams.slug = currentService.slug[newLocale];
-      // }
 
       if (categoryData) {
         const currentService = categoryData.find(
