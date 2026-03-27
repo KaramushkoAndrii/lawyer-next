@@ -2,6 +2,8 @@ import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ServicesList from "@/components/UI/servicesList/ServicesList";
 import MainSection from "@/components/UI/mainSection/MainSection";
 import PageWithAside from "@/components/UI/pageWithAside/PageWithAside";
+import { getData } from "@/lib/getData";
+import DynamicZone from "@/components/base/dynamicZone/DynamicZone";
 // import ServicesData from "@/data/servicesData";
 import Heading from "@/components/UI/heading/Heading";
 import { getLocale } from "next-intl/server";
@@ -15,12 +17,20 @@ export const metadata = {
 // 2. Сам компонент ОБЯЗАТЕЛЬНО должен быть export default function
 export default async function BuildPage() {
   const locale = await getLocale();
+
+  const data = await getData("/build-page", {
+    "populate[content][populate]": "*",
+  });
+
+  const content = data.data.content;
+
   return (
     <>
-      <MainSection />
+      <MainSection title={data.data.header} />
       <PageWithAside>
         <>
-          <Heading>Адвокат з нерухомості та житлових</Heading>
+          <Heading>{data.data.title}</Heading>
+          <DynamicZone blocks={content} />
           <p>
             Адвокат у сфері нерухомості – це спеціаліст, який забезпечує захист
             прав та інтересів клієнта під час здійснення правочинів щодо
@@ -99,8 +109,6 @@ export default async function BuildPage() {
           <Heading level="h3" align="center">
             Вказаний вище перелік послуг не є вичерпним
           </Heading>
-
-          <Heading>Текущая локаль:{locale}</Heading>
 
           <ServicesList
             listData={BuildServicesData}
