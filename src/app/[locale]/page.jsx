@@ -14,14 +14,21 @@ export default async function Home({ params }) {
   const { locale } = await params;
 
   const heroSectionData = await getData("/hero-section", {
-    populate: "cover",
+    populate: {
+      cover: true,
+    },
   });
 
   const welcomeSectionData = await getData("/welcome-section", {
-    populate: ["description", "image"],
+    populate: {
+      description: true,
+      image: true,
+    },
   });
 
   const servicesSectionData = await getData("/service-section");
+
+  const getServicesList = await getData("/uslugis");
 
   const t = await getTranslations("HomePage");
   return (
@@ -29,7 +36,10 @@ export default async function Home({ params }) {
       <HeroSection data={heroSectionData.data} />
       <Container>
         <WelcomeSection data={welcomeSectionData.data} />
-        <ServicesSection data={servicesSectionData.data} />
+        <ServicesSection
+          data={servicesSectionData.data}
+          list={getServicesList.data}
+        />
       </Container>
     </>
   );

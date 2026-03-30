@@ -14,7 +14,10 @@ export default function RichText({ content }) {
             const tagLevel = `h${level}`;
 
             return (
-              <Heading level={tagLevel} align="start">
+              <Heading
+                level={tagLevel}
+                align={tagLevel === "h4" ? "center" : "responsive"}
+              >
                 {children}
               </Heading>
             );

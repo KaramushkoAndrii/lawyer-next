@@ -1,3 +1,5 @@
+"use client";
+
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 
 export default function ImageAndText({ description, position, alt, image }) {

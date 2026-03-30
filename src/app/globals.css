@@ -81,6 +81,12 @@ body {
     margin: 0.75rem 0;
   }
 
+  .custom-h4 {
+    font-size: clamp(0.75rem, 5vw, 1rem);
+    letter-spacing: 0.12rem;
+    margin: 0.75rem 0;
+  }
+
   .custom-list-disc-inside {
     display: flex;
     flex-direction: column;

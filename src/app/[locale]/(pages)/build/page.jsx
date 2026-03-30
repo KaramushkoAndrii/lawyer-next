@@ -19,17 +19,32 @@ export default async function BuildPage() {
   const locale = await getLocale();
 
   const data = await getData("/build-page", {
-    "populate[content][populate]": "*",
+    populate: {
+      content: {
+        populate: "*",
+      },
+      pageHeader: {
+        populate: {
+          cover: true,
+        },
+      },
+    },
   });
 
+  const { pageHeader } = data.data;
   const content = data.data.content;
 
   return (
     <>
-      <MainSection title={data.data.header} />
+      <MainSection
+        alt={pageHeader[0].alt}
+        src={pageHeader[0].cover?.url}
+        title={pageHeader[0].title}
+      />
       <PageWithAside>
         <>
-          <Heading>{data.data.title}</Heading>
+          <DynamicZone blocks={content} />
+          {/* <Heading>{data.data.title}</Heading>
           <DynamicZone blocks={content} />
           <p>
             Адвокат у сфері нерухомості – це спеціаліст, який забезпечує захист
@@ -116,7 +131,7 @@ export default async function BuildPage() {
             footer={"Gjckeub fldjrfnf 2"}
             keyGroup={"BuildList"}
             routePath="/build"
-          />
+          /> */}
         </>
       </PageWithAside>
     </>

@@ -1,32 +1,21 @@
+import qs from "qs";
 const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
-export async function getData(
-  url,
-  { locale, revalidate = 60, ...params } = {}
-) {
-  const searchParams = new URLSearchParams();
-
-  if (locale) {
-    searchParams.append("locale", locale);
-  }
-
-  Object.entries(params).forEach(([key, value]) => {
-    if (Array.isArray(value)) {
-      value.forEach((val) => searchParams.append(key, val));
-    } else {
-      searchParams.append(key, value);
-    }
+export async function getData(url, query = {}, options = {}) {
+  const queryString = qs.stringify(query, {
+    encodeValuesOnly: true,
   });
 
-  const queryString = searchParams.toString();
   const fullUrl = `${API_URL}${url}${queryString ? `?${queryString}` : ""}`;
 
   const res = await fetch(fullUrl, {
-    next: { revalidate },
+    ...options,
+    next: { revalidate: 60, ...options.next },
   });
 
   if (!res.ok) {
-    throw new Error(`Error fetching ${url}`);
+    const errorText = await res.text();
+    throw new Error(`error fetching ${url}, ${res.status}: ${errorText}`);
   }
 
   return res.json();
