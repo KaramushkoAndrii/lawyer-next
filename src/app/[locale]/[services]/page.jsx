@@ -22,12 +22,17 @@ export default async function ServicesPage({ params }) {
           "dynamic-items.content-page": {
             populate: "*",
           },
+          "dynamic-items.modal-button": {
+            populate: "*",
+          },
+          "dynamic-items.section-title": {
+            populate: "*",
+          },
         },
       },
     },
   });
 
-  console.log(requestData.content);
   const data = requestData?.data[0];
 
   return (

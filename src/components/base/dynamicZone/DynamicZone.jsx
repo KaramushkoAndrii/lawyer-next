@@ -1,6 +1,8 @@
 import RichText from "../richText/RichText";
 import ImgContainer from "@/components/UI/imgContainer/ImgContainer";
 import ImageAndText from "../imageAndText/ImageAndText";
+import ModalButton from "@/components/UI/modalButton/ModalButton";
+import Heading from "@/components/UI/heading/Heading";
 
 export default function DynamicZone({ blocks }) {
   if (!blocks) return null;
@@ -31,6 +33,10 @@ export default function DynamicZone({ blocks }) {
                 image={block.image}
               />
             );
+          case "dynamic-items.modal-button":
+            return <ModalButton>{block.text}</ModalButton>;
+          case "dynamic-items.section-title":
+            return <Heading level="h3">{block.title}</Heading>;
           default:
             return null;
         }
